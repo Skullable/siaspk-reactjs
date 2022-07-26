@@ -53,7 +53,7 @@ export default function Top() {
   return (
     <div className={classes.top} id="top">
         <div className={classes.textcontain}>
-              <h1 className={classes.heading}>About</h1>
+              <h1 className={classes.heading}>Clients</h1>
               <ul className={classes.breadcrumbs}><BasicBreadcrumbs/></ul>
         </div>
         <div className={classes.imgcontain}><img className={classes.img} src="Images/mid.jpeg" alt="" /></div>
