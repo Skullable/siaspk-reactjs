@@ -54,6 +54,13 @@ const useStyles = makeStyles({
   },
   box:{
     zIndex: 4,
+    opacity: 0.5,
+    transition: 'all .8s',
+    '&:hover':{
+      opacity: 1,
+      bottom: '14px',
+      
+    }
   }
 
 
