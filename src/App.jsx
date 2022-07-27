@@ -1,6 +1,5 @@
 import Services from "./components/Services";
 import { makeStyles } from "@mui/styles";
-import { ClassNames } from "@emotion/react";
 
 const useStyles = makeStyles({
   app:{
@@ -11,7 +10,7 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles();
   return (
-    <div className={ClassNames.app}>
+    <div className={classes.app}>
       <Services/>
     </div>
   );
