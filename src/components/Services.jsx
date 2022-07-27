@@ -1,7 +1,7 @@
 import Topbar from './Topbar';
 import Top from './Top';
 import Info from './Info';
-import Aboutcontent from './About-content';
+import Aboutcontent from './Services-content';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   }
 })
 
-function About() {
+function Services() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
@@ -28,4 +28,4 @@ function About() {
   );
 }
 
-export default About;
+export default Services;
