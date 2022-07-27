@@ -1,5 +1,4 @@
-import About from "./components/Services";
-import Topbar from "./components/Topbar";
+import Services from "./components/Services";
 import { makeStyles } from "@mui/styles";
 import { ClassNames } from "@emotion/react";
 
@@ -13,7 +12,7 @@ function App() {
   const classes = useStyles();
   return (
     <div className={ClassNames.app}>
-      <About/>
+      <Services/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import Topbar from './Topbar';
 import Top from './Top';
 import Info from './Info';
-import Aboutcontent from './Services-content';
+import Servicescontent from './Services-content';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
 
@@ -22,7 +22,7 @@ function Services() {
       <Topbar/>
       <Top/>
       <Info/>
-      <Aboutcontent/>
+      <Servicescontent/>
       <Footer/>
     </div>
   );
