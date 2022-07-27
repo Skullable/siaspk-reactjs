@@ -48,6 +48,7 @@ const useStyles = makeStyles({
 })
 
 export default function Top() {
+  const pagename = 'Services'
   const classes = useStyles();
   return (
     <div className={classes.top} id="top">

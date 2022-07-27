@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles"
+import Pagename from "./Pagename";
 
 const useStyles = makeStyles({
     info:{
