@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   },
 
   breadcrumbs:{
-    padding: '23%',
+    padding: '20%',
   },
 
   imgcontain:{
