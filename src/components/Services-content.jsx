@@ -67,30 +67,54 @@ const useStyles = makeStyles({
         lineHeight:'36px',
         fontWeight:'600',
         color: '#54595f',
+        margin: '20px'
 
 
     },
     coretechnologies:{
+        display: 'flex',
         alignItems: 'center',
+        justifyContent: 'space-around',
+        marginBottom: '100px',
     },
     wrapper:{
         display: 'flex',
+        flexWrap: 'wrap',
         flexDirection: 'row',
-
+        width: '85%',
+        padding: '40px',
+        alignItems: 'center',
+        justifyContent: 'space-around',
     },
     imgcontainer:{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        margin: '15px'
+    },
+    img2:{
+        height: '180px',
+        width: '180px',
+        objectFit: 'contain'
     },
     h6:{
         fontSize: '24px',
         lineHeight: '24px',
         fontWeight: 600,
         color: '#54595f',
+        margin: '10px'
     },
 
 })
+function Imagecontainer(props) {
+    const classes = useStyles();
+    return(
+        <div className={classes.imgcontainer}>
+                  <img className={classes.img2} src={props.path} alt="" />
+                  <h6 className={classes.h6}>{props.text}</h6>
+        </div>
+    )
+}
 
 export default function Servicescontent() {
         const classes = useStyles();
@@ -160,33 +184,19 @@ export default function Servicescontent() {
                         <img className={classes.img} src="Images/iot.png" alt="" />
                     </div>
             </div>
+            <h4 className={classes.h4}>Core Technologies</h4>
               <div className={classes.coretechnologies}>
-                <h4 className={classes.h4}>Core Technologies</h4>
                 <div className={classes.wrapper}>
-                 <div className={classes.imgcontainer}>
-                  <img className={classes.img2} src="Images/Android-java.jpg" alt="" />
-                  <h6 className={classes.h6}>Java - Android</h6>
-                 </div>
-                 <div className={classes.imgcontainer}>
-                  <img className={classes.img2} src="Images/Node-js.jpg" alt="" />
-                  <h6 className={classes.h6}>Node JS</h6>
-                 </div>
-                 <div className={classes.imgcontainer}>
-                  <img className={classes.img2} src="Images/laravel.jpg" alt="" />
-                  <h6 className={classes.h6}>Laravel</h6>
-                 </div>
-                 <div className={classes.imgcontainer}>
-                  <img className={classes.img2} src="Images/Reaacr-Native.jpg" alt="" />
-                  <h6 className={classes.h6}>React JS</h6>
-                 </div>
-                 <div className={classes.imgcontainer}>
-                  <img className={classes.img2} src="Images/ios-swift.jpg" alt="" />
-                  <h6 className={classes.h6}>iOS - Swift/Objective C</h6>
-                 </div>
-                 <div className={classes.imgcontainer}>
-                  <img className={classes.img2} src="Images/flutter.jpg" alt="" />
-                  <h6 className={classes.h6}>Flutter</h6>
-                 </div>
+                    <Imagecontainer path='Images/Android-java.jpg' text='Java - Android'/>
+                    <Imagecontainer path='Images/Node-js.jpg' text='Node JS' />
+                    <Imagecontainer path='Images/laravel.jpg' text='Laravel'/>
+                    <Imagecontainer path='Images/Reaacr-Native.jpg' text='React JS'/>
+                    <Imagecontainer path='Images/ios-swift.jpg' text='iOS - Swift/Objective C'/>
+                    <Imagecontainer path='Images/flutter.jpg' text='Flutter'/>
+                    <Imagecontainer path='Images/django.jpg' text='Python/Django'/>
+                    <Imagecontainer path='Images/wordpress.png' text='WordPress'/>
+                    <Imagecontainer path='Images/bootstrap.png' text='Bootstrap'/>
+                    <Imagecontainer path='Images/dot_net.png' text='ASP.NET'/>
                 </div>
             </div>
         </div>
