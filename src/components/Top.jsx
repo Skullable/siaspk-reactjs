@@ -48,11 +48,12 @@ const useStyles = makeStyles({
 })
 
 export default function Top() {
+  const pagename = 'Services'
   const classes = useStyles();
   return (
     <div className={classes.top} id="top">
         <div className={classes.textcontain}>
-              <h1 className={classes.heading}>Services</h1>
+              <h1 className={classes.heading}>{pagename}</h1>
               <ul className={classes.breadcrumbs}><BasicBreadcrumbs/></ul>
         </div>
         <div className={classes.imgcontain}><img className={classes.img} src="Images/mid.jpeg" alt="" /></div>
