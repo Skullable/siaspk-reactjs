@@ -1,4 +1,4 @@
-import Clients from "./components/Clients";
+import Page from "./components/Clients";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -11,7 +11,7 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.app}>
-      <Clients/>
+      <Page/>
     </div>
   );
 }
