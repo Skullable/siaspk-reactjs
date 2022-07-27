@@ -1,7 +1,6 @@
 import { makeStyles } from '@mui/styles'
 import BasicBreadcrumbs from './Breadcrumbs'
 
-const currentPage = '';
 const useStyles = makeStyles({
   top:{
     position: 'relative',
