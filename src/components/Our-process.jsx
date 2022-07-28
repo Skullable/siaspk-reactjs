@@ -1,6 +1,6 @@
 import Topbar from './Topbar';
 import Top from './Top';
-import Clientscontent from './Clients-content';
+import Ourprocesscontent from './Our-process-content';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
 
@@ -14,16 +14,16 @@ const useStyles = makeStyles({
   }
 })
 
-function Clients() {
+function Ourprocess() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
       <Topbar/>
       <Top/>
-      <Clientscontent/>
+      <Ourprocesscontent/>
       <Footer/>
     </div>
   );
 }
 
-export default Clients;
+export default Ourprocess;
