@@ -35,7 +35,7 @@ export default function BasicBreadcrumbs() {
           HOME
         </Link>,
         <Typography key="3" color="text.primary" fontFamily="poppins" fontSize="small" >
-          SERVICES
+          CONTACT
         </Typography>,
       ];
     

@@ -1,6 +1,7 @@
+
 import Topbar from './Topbar';
 import Top from './Top';
-import Clientscontent from './Clients-content';
+import Contactcontent from './Contact-content';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
 
@@ -14,16 +15,16 @@ const useStyles = makeStyles({
   }
 })
 
-function Clients() {
+function Page() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
       <Topbar/>
       <Top/>
-      <Clientscontent/>
+      <Contactcontent/>
       <Footer/>
     </div>
   );
 }
 
-export default Clients;
+export default Page;

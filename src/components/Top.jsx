@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   },
 
   breadcrumbs:{
-    padding: '23%',
+    padding: '19%',
   },
 
   imgcontain:{
@@ -48,10 +48,10 @@ const useStyles = makeStyles({
 })
 
 export default function Top() {
-  const pagename = 'Services'
+  const pagename = 'Contact'
   const classes = useStyles();
   return (
-    <div className={classes.top} id="top">
+    <div className={classes.top}>
         <div className={classes.textcontain}>
               <h1 className={classes.heading}>{pagename}</h1>
               <ul className={classes.breadcrumbs}><BasicBreadcrumbs/></ul>
