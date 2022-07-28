@@ -18,8 +18,9 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
+    alignItems: 'center',
     zIndex: 2,
-    width: '200px',
+    width: '400px',
     top: '50px',
   },
 
@@ -34,7 +35,7 @@ const useStyles = makeStyles({
   },
 
   breadcrumbs:{
-    padding: '20%',
+    marginTop: '25px'
   },
 
   imgcontain:{
@@ -48,7 +49,7 @@ const useStyles = makeStyles({
 })
 
 export default function Top() {
-  const pagename = 'Services'
+  const pagename = 'Our Process'
   const classes = useStyles();
   return (
     <div className={classes.top} id="top">

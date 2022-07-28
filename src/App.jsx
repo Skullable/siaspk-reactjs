@@ -1,4 +1,5 @@
-import Page from "./components/Services";
+
+import Page from "./components/Our-process";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
