@@ -1,7 +1,9 @@
 import { makeStyles } from "@mui/styles";
-import Button from "@mui/joy/Button";
+import Button from "@mui/material/Button";
 import TextField from "@mui/joy/TextField";
+import Hook from "./Button";
 import Box from '@mui/joy/Box'
+import { fontSize, lineHeight } from "@mui/system";
 //import { Map, TileLayer } from 'react-leaflet';
 //import { useState } from "react";
 //import osm from "./osm";
@@ -14,23 +16,51 @@ const useStyles = makeStyles({
     contact:{
         alignItems: 'center'
     },
-    button:{
-        backgroundColor: '#1e74be'
+    h2:{
+        fontFamily: 'Poppins',
+    },
+    contactfield:{
+        display: "flex",
+        alignItems: 'center',
+    },
+    span:{
+        fontFamily: 'poppins',
+        fontWeight: 500,
+        color: '#202833',
+        fontSize: '36px',
+        lineHeight: '36px',
     },
     userinput:{
+        display: 'flex',
+        flexDirection: "column",
         alignItems: 'left',
+        justifyContent: 'space-around',
+        flex:2,
         width: '80%'
+    },
+    contactinfo:{
+        flex: 1
     },
     nameinput:{
         backgroundColor:'#efefef',
-        borderRadius: '5px',
+        borderRadius: '1px',
         height: '40px',
         width: '600px',
+        textTransform: 'uppercase',
+        margin: '10px',
+
+        '&::placeholder':{
+            fontFamily: 'Poppins',
+            textTransform: 'uppercase',
+        }
+
 
     },
+
+    
     msginput:{
         backgroundColor:'#efefef',
-        borderRadius: '5px',
+        borderRadius: '1px',
         height: '300px',
         width: '600px',
 
@@ -41,8 +71,8 @@ const useStyles = makeStyles({
 export default function Contactcontent() {
     const classes = useStyles();
 //  let mapOptions ={
-//        center: [31.50357, 74.31905],
-//        zoom: 13,
+    //        zoom: 13,
+    //        center: [31.50357, 74.31905],
 //    }
 //    let map = new Window.L.map('map', mapOptions);
 //    let layer = new Window.L.TileLayer('http://{s}.title.openstreetmap.org/{z}/{x}/{y}.png');
@@ -52,22 +82,14 @@ export default function Contactcontent() {
         <div className={classes.contact}>
            <div className={classes.contactfield}>
             <div className={classes.userinput}>
-             <Box
-              sx={{
-              py: 2,
-              display: 'grid',
-              gap: 2,
-              alignItems: 'left',
-              flexWrap: 'wrap',
-             }}
-            >
-             <TextField className={classes.nameinput} placeholder='Full Name' variant="solid"/>
-             <TextField className={classes.nameinput} placeholder="Phone Number" variant="solid"/>
-             <TextField className={classes.nameinput} placeholder="Email Address" variant="solid"/>
-             <TextField className={classes.msginput} placeholder="Your Message" variant="solid"/>
-             <Button Classname={classes.button}>SEND MESSAGE</Button>
-            </Box>
-           </div>
+             <span className={classes.span}>Contact Form</span>
+             <TextField className={classes.nameinput} placeholder='FULL NAME' variant="solid"/>
+             <TextField className={classes.nameinput} placeholder='PHONE NUMBER' variant="solid"/>
+             <TextField className={classes.nameinput} placeholder='EMAIL ADDRESS' variant="solid"/>
+             <TextField className={classes.msginput} placeholder='YOUR MESSAGE' variant="solid"/>
+             <Hook/>
+            </div>
+            <div className={classes.contactinfo}></div>
           </div> 
         </div>
     )
@@ -99,3 +121,8 @@ export default function Contactcontent() {
  //////    </div> 
  //    ) 
 //} 
+
+//<TextField className={classes.nameinput} placeholder='Full Name' variant="solid"/>
+//<TextField className={classes.nameinput} placeholder="Phone Number" variant="solid"/>
+//<TextField className={classes.nameinput} placeholder="Email Address" variant="solid"/>
+//<TextField className={classes.msginput} placeholder="Your Message" variant="solid"/>
