@@ -3,12 +3,11 @@ import { makeStyles } from "@mui/styles";
 import Button from "@mui/material/Button";
 import TextField from "@mui/joy/TextField";
 import Hook from "./Button";
-import * as L from "leaflet"
-import Box from '@mui/joy/Box'
-import { color, fontSize, margin, padding } from "@mui/system";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
+import { AccessTimeSharp } from "@mui/icons-material";
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 //import { Map, TileLayer } from 'react-leaflet';
 //import { useState } from "react";
 //import osm from "./osm";
@@ -19,7 +18,17 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const useStyles = makeStyles({
     contact:{
-        alignItems: 'center'
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginBottom: '100px'
+    },
+    mapcontainer: {
+        alignItems: 'center',
+        height: '700px',
+        width: '85%',
+        margin: '50px',
+        border: 'solid 2px #808080'
     },
     h2:{
         fontFamily: 'Poppins',
@@ -27,11 +36,16 @@ const useStyles = makeStyles({
     contactfield:{
         display: "flex",
         width: '90%',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+    },
+    '@media (max-width:1024px)':{
+        contactfield:{
+            flexDirection: 'column'
+
+        }
     },
     span:{
         display: 'flex',
-        flexDirection: 'row',
         fontFamily: 'poppins',
         fontWeight: 500,
         color: '#202833',
@@ -41,9 +55,13 @@ const useStyles = makeStyles({
     },
     textcontainer:{
         display: 'flex',
-        flexDirection: 'row',
         alignItems: 'center',
         padding: '10px',
+    },
+    textcontainer2:{
+        display: 'flex',
+        justifyContent: 'sapce-between',
+        alignItems: 'center',
     },
 
     p:{
@@ -54,24 +72,36 @@ const useStyles = makeStyles({
         paddingLeft: '10px',
         color: '#7f7f7f',
     },
+    p2:{
+        fontFamily: 'poppins',
+        fontSize: '16px',
+        fontWeight: 300,
+        lineHeight: '21px',
+        paddingLeft: '10px',
+        color: '#7f7f7f',
+        paddingLeft: '50px',
+    },
     userinput:{
+        display: 'flex',
         flexDirection: "column",
-        alignItems: 'left',
-        justifyContent: 'space-around',
         flex:3,
-        width: '80%',
         margin: '20px',
     },
     contactdata:{
-        flex: 3
+        display: 'flex',
+        flexDirection: "column",
+        alignItems: 'left',
+        flex: 2,
+        margin: '10px'
     },
     contactinfo:{
         display: 'flex',
         flexDirection: "column",
         alignItems: 'left',
-        justifyContent: 'space-around',
-        width: '80%',
-        margin: '20px',
+        margin: '15px',
+    },
+    openhours:{
+        margin: '15px'
     },
     nameinput:{
         backgroundColor:'#efefef',
@@ -80,12 +110,9 @@ const useStyles = makeStyles({
         width: '600px',
         textTransform: 'uppercase',
         margin: '10px',
-
-        '&::placeholder':{
-            fontFamily: 'Poppins',
-            fontWeight: 300,
-            textTransform: 'uppercase',
-        }
+        fontFamily: 'Poppins',
+        fontWeight: 300,
+        textTransform: 'uppercase',
 
 
     },
@@ -96,6 +123,8 @@ const useStyles = makeStyles({
         borderRadius: '1px',
         height: '300px',
         width: '600px',
+        paddingRight: '100px',
+        margin: '10px',
 
     },
     icons:{
@@ -115,13 +144,21 @@ export default function Contactcontent() {
 
     return (
         <div className={classes.contact}>
-           <div id="map">
-            <map></map>
-           </div>
+            <Map className={classes.mapcontainer} center={[31.50717, 74.33607]} zoom={17} scrollWheelZoom={false}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[31.50717, 74.33607]}>
+                    <Popup>
+                        Smart A&I solutions <br /> FF 11 Center point plaza, Main Blvd
+                    </Popup>
+                </Marker>
+            </Map>
            <div className={classes.contactfield}>
             <div className={classes.userinput}>
              <span className={classes.span}>Contact Form</span>
-             <TextField className={classes.nameinput} placeholder='FULL NAME' variant="solid"/>
+             <TextField className={classes.nameinput} placeholder='FULL NAME' variant="solid" id='fullWidth'/>
              <TextField className={classes.nameinput} placeholder='PHONE NUMBER' variant="solid"/>
              <TextField className={classes.nameinput} placeholder='EMAIL ADDRESS' variant="solid"/>
              <TextField className={classes.msginput} placeholder='YOUR MESSAGE' variant="solid"/>
@@ -133,6 +170,11 @@ export default function Contactcontent() {
                  <div className={classes.textcontainer}> <LocationOnIcon className={classes.icons} fontSize='12'/> <p className={classes.p}> FF 11 Center point plaza, Main Blvd, Block E 2 Gulberg III, Lahore, Punjab</p> </div>
                  <div className={classes.textcontainer}> <CallIcon className={classes.icons} fontSize='12'/> <p className={classes.p}>	+92 311 1555082</p> </div>
                  <div className={classes.textcontainer}> <EmailIcon className={classes.icons} fontSize='12'/> <p className={classes.p}> info@saispk.com</p> </div>
+                </div>
+                <div className={classes.openhours}>
+                 <span className={classes.span}>Open Hours</span>
+                 <div className={classes.textcontainer}> <AccessTimeSharp className={classes.icons} fontSize='12'/> <p className={classes.p}>Weekdays</p> <p className={classes.p2}>9:00-18:00</p></div>
+                 <div className={classes.textcontainer}> <AccessTimeSharp className={classes.icons} fontSize='12'/> <p className={classes.p}>Call Center</p> <p className={classes.p2}> 24/7</p></div>
                 </div>
             </div>
           </div> 

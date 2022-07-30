@@ -7,17 +7,19 @@ const useStyles = makeStyles({
   root: {
     background: '#1d73be',
     border: 'solid 3px #1d73be',
-    width: '250px',
-    height: '300px',
+    width: '230px',
+    height: '80px',
     borderRadius: '50px',
     color: 'White',
-    height: 50,
     padding: '0 30px',
     cursor: 'pointer',
     margin: '15px',
     fontFamily: 'Poppins',
     fontWeight: 300,
     transition: 'all .5s',
+    '&:placholder':{
+      fontFamily: 'Poppins'
+    },
     '&:hover':{
       background: 'white',
       color: '#1d73be',
