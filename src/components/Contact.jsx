@@ -1,6 +1,5 @@
 
 import Topbar from './Topbar';
-import Top from './Top';
 import Contactcontent from './Contact-content';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
@@ -20,7 +19,6 @@ function Page() {
   return (
     <div className={classes.about}>
       <Topbar/>
-      <Top/>
       <Contactcontent/>
       <Footer/>
     </div>
