@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 
 })
 
-export default function Top() {
+export default function Topabout() {
   const classes = useStyles();
   return (
     <div className={classes.top} id="top">
