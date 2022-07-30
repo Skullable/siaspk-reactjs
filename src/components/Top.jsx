@@ -17,6 +17,7 @@ const useStyles = makeStyles({
   textcontain:{
     position: 'absolute',
     display: 'flex',
+    alignItems: 'center',
     flexDirection: 'column',
     textAlign: 'center',
     zIndex: 2,
@@ -35,7 +36,7 @@ const useStyles = makeStyles({
   },
 
   breadcrumbs:{
-    padding: '23%',
+    marginTop: '25px',
   },
 
   imgcontain:{

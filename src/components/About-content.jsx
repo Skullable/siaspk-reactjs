@@ -16,9 +16,14 @@ const useStyles = makeStyles({
         width: '80%',
         position: 'relative',
         overflow: 'hidden',
-        margin: '4%'
-
+        margin: '4%',
     },
+        '@media (max-width:1024px)':{
+            containers:{
+                flexDirection: 'column',
+            }
+        },
+
 
     left:{
         flex: 1,
