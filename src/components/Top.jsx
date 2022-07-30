@@ -19,8 +19,9 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
+    alignItems: 'center',
     zIndex: 2,
-    width: '200px',
+    width: '400px',
     top: '50px',
   },
 
@@ -49,6 +50,7 @@ const useStyles = makeStyles({
 })
 
 export default function Top() {
+
   const pagename = 'Contact'
   const classes = useStyles();
   return (

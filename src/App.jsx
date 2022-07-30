@@ -1,4 +1,4 @@
-import Page from "./components/Contact";
+import Page from "./components/Contact";r
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
