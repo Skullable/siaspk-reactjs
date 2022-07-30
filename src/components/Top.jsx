@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
     textAlign: 'center',
     alignItems: 'center',
     zIndex: 2,
@@ -49,10 +50,11 @@ const useStyles = makeStyles({
 })
 
 export default function Top() {
-  const pagename = 'Our Process'
+
+  const pagename = 'Contact'
   const classes = useStyles();
   return (
-    <div className={classes.top} id="top">
+    <div className={classes.top}>
         <div className={classes.textcontain}>
               <h1 className={classes.heading}>{pagename}</h1>
               <ul className={classes.breadcrumbs}><BasicBreadcrumbs/></ul>
