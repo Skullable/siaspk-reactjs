@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import slider from "./Slider";
 import TextField from "@mui/joy/TextField";
 import Button from "./Button";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -24,6 +25,7 @@ export default function Homecontent() {
 
     return (
         <div className={classes.Home}>
+            <slider className={classes.slider}/>
         </div>
     )
 }
