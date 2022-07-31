@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     },
     containers:{
         display: 'flex',
-        width: '80%',
+        width: '60%',
         position: 'relative',
         overflow: 'hidden',
         margin: '4%',
