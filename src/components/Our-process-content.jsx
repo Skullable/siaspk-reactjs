@@ -43,6 +43,7 @@ const useStyles = makeStyles({
     mid:{
         display: 'flex',
         flexWrap: 'wrap',
+        flexDirection: 'column',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'space-around',
