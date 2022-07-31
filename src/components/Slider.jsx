@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {  makeStyles } from "@mui/material";
 
-const Carouselwrapper = styled.div`
+/*const Carouselwrapper = styled.div`
   width: 100%;
   .carousel-control.left,
   .carousel-control.right {
     background: none;
   }
-`;
+`;*/
+
 
 export default function Slider() {
   return (
-    <Carouselwrapper>
       <Carousel fade>
         <Carousel.Item interval={1600} touch="true">
           <img
@@ -51,6 +52,32 @@ export default function Slider() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </Carouselwrapper>
+
   );
 }
+/*import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+    slides:{
+        
+    }
+})
+
+
+export default function Slider() {
+    const classes = useStyles();
+  return (
+    <ul class={classes.slides}>
+      <li>
+        <img src="1.jpg" alt="" />
+      </li>
+      <li>
+        <img src="2.jpg" alt="" />
+      </li>
+      <li>
+        <img src="3.jpg" alt="" />
+      </li>
+    </ul>
+  );
+}
+*/
