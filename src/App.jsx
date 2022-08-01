@@ -1,4 +1,4 @@
-import About from "./components/about";
+import About from "./components/About";
 import Topbar from "./components/Topbar";
 import { makeStyles } from "@mui/styles";
 import { ClassNames } from "@emotion/react";
