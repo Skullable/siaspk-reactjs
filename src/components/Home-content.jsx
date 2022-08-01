@@ -25,8 +25,9 @@ const useStyles = makeStyles({
     alignItems: 'flex-start',
     display: 'flex',
     flexDirection: 'row',
-    width: '70%',
-    marginRight: '60px'
+    width: '80%',
+  
+    justifyContent: 'center',
 
   },
   processheading: {
@@ -79,30 +80,35 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#1f2732',
-    backgroundImage: 'Images/texture.png'
+    backgroundImage: "url(/images/texture.png)",
+    backgroundAttachment: 'fixed',
   },
   industriesHeading: {
     paddingTop: '100px',
     margin: '3%',
     fontFamily: 'Poppins',
-    fontSize: '48px',
+    fontSize: '42px',
     fontWeight : 500,
-    lineHeight: '43px',
+    lineHeight: '42px',
     color: '#ffff'
   },
   industriescontainer: {
+    alignItems: 'center',
     display: 'flex',
     flexWrap: 'wrap',
-    width: '70%',
-    justifyContent: 'space-around'
+    flexDirection: 'row',
+    width: '90%',
+    justifyContent: 'center',
+    marginBottom: '100px',
 
   },
   industriesbox: {
-    width: '400px',
+    width: '300px',
     display: 'flex',
+    flexWrap: 'wrap',
     alignItems: 'center',
     flexDirection: 'column',
-    padding: '50px',
+    margin: '50px',
     
   },
   industriesimg:{
@@ -110,6 +116,7 @@ const useStyles = makeStyles({
     width:'60px',  
   },
   industriesboxheading:{
+    display: 'flex',
     marginTop: '10px',
     textAlign: 'center',
     fontFamily: 'poppins',
@@ -118,7 +125,78 @@ const useStyles = makeStyles({
     fontWeight: 500,
     color: 'white',
 
-  }
+  },
+
+  /*-- who we are --*/
+
+  weare: {
+    display: 'flex',
+    width: '100%',
+
+  },
+  weareleft: {
+    backgroundColor: 'none',
+    backgroundImage: "url(/Images/bussinessman.jpg)",
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    width: '50%',
+    display: 'flex',
+    flex: 1,
+  },
+  weareright: {
+    alignItems: 'center',
+    backgroundColor: '#f4f4f5',
+    width: '50%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    flex: 1,
+    justifyContent: 'center'
+  },
+  wearetxt:{
+    paddingTop: '180px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    width: '70%',
+    paddingRight: '100px',
+    marginBottom: '250px',
+  },
+  weareheading: {
+    fontSize: '54px',
+    lineHeight: '48px',
+    fontWeight: 500,
+    fontFamily: 'poppins',
+    marginBottom: '10px',
+    color: '#1f2732',
+  },
+  wearesubheading:{
+    fontSize: '20px',
+    lineHeight: '30px',
+    fontWeight: 300,
+    fontFamily: 'poppins',
+    marginTop: '30px',
+    marginBottom: '30px',
+    color: '#1f2732'    
+  },
+  weareinfo:{
+    fontSize: '16px',
+    lineHeight: '30px',
+    fontWeight: 300,
+    fontFamily: 'poppins',
+    margin: '5px',
+    color: '#7f7f7f'
+  },
+
+/*--software--*/
+software:{
+  width: '100%',
+  backgroundImage: 'url(Images/bgimage.jpg)',
+  backgroundAttachment: 'fixed',
+  backgroundSize: 'cover',
+},
+
+
 
 });
 
@@ -260,6 +338,37 @@ function Industries(){
       </div>
     </div>
   );
+};
+
+function Weare(){
+  const classes = useStyles();
+  
+  return(
+    <div className={classes.weare}>
+      <div className={classes.weareleft}></div>
+      <div className={classes.weareright}>
+        <div className={classes.wearetxt}>
+          <span className={classes.weareheading}>Who We Are</span>
+          <span className={classes.wearesubheading}>Full suite software house focusing on IoT based/Custom Solutions to problems faced by businesses daily.</span>
+          <div className={classes.weareinfo}>Smart A&I Solutions offers our customers a wealth of technical and business expertise. We create diverse, complex, web and mobile solutions for any business need. Our knowledge and experience translate to added value and peace of mind for our customers. With Smart A&I Solutions you get quality software and perfect service every time.</div>
+        </div>
+      </div>
+    </div>
+  )
+};
+
+function Software() {
+  const classes = useStyles();
+
+  return(
+    <div className={classes.software}>
+      <div className={classes.softwarecontainer}>
+        <div className={classes.infocard}>
+          
+        </div>
+      </div>
+    </div>
+  )
 }
 
 
@@ -271,6 +380,7 @@ export default function Homecontent() {
       <Slider className={classes.slider} />
       <Ourprocess/>
       <Industries/>
+      <Weare/>
     </div>
   );
 }
