@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
   ourprocess:{
     justifyContent: 'center',
-    alignItems: 'center !important',
+    alignItems: 'center',
     width: '100%'
   },
   processcontainer: {
@@ -32,11 +32,20 @@ const useStyles = makeStyles({
     color: '#1f2732'
   },
   left:{
+    alignItems: 'center',
     display: 'flex',
+    width: '30%'
   },
   processimg:{
     width: '190px',
     height: '190px',
+  },
+  processinfo:{
+    textAlign: 'center',
+    fontFamily: 'Poppins',
+    fontSize: '16px',
+    fontWeight: 300,
+    lineHeight: '24px',
   }
 });
 
@@ -51,6 +60,7 @@ function Ourprocess(){
           <div className={classes.imgcontain}>
             <img src="Images/our-process-line1.png" alt='' />
             <img className={classes.processimg} src="Images/strategy.png" alt=""/>
+            <div className={classes.processinfo}>Strategy takes your idea and creates a plan of action to make it a reality. Lean, multidisciplinary teams work alongside you in a series of engaging activities and workshops to uncover strategic opportunities for a new business, or an addition to an existing one.</div>
           </div>
 
         </div>
