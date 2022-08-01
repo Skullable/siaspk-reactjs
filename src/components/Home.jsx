@@ -1,7 +1,6 @@
+
 import Topbar from './Topbar';
-import Top from './Top';
-import Info from './Info';
-import Servicescontent from './Services-content';
+import Homecontent from './Home-content';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
 
@@ -15,17 +14,15 @@ const useStyles = makeStyles({
   }
 })
 
-function Services() {
+function Home() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
       <Topbar/>
-      <Top/>
-      <Info/>
-      <Servicescontent/>
-      <Footer/>
+      <Homecontent/>
+      <Footer variant='1'/>
     </div>
   );
 }
 
-export default Services;
+export default Home;
