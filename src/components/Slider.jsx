@@ -17,6 +17,7 @@ export default function Slider() {
       <Carousel fade>
         <Carousel.Item interval={1600} touch="true">
           <img
+            height= '100%'
             className="d-block w-100"
             src="Images/slider1.jpg"
             alt="First slide"
