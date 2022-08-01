@@ -1,7 +1,7 @@
 import Topbar from './Topbar';
 import Topabout from './Top-about';
 import Info from './Info';
-import Aboutcontent from './About-content';
+import Aboutcontent from './AboutContent';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
 
