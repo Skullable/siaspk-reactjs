@@ -15,9 +15,6 @@ const useStyles = makeStyles({
     alignItems: 'center',
     marginBottom: "30px",
   },
-  slider: {
-    height: '30%',
-  },
   ourprocess:{
     display: 'flex',
     flexDirection: 'column',
@@ -644,7 +641,7 @@ export default function Homecontent() {
 
   return (
     <div className={classes.Home}>
-      <Slider className={classes.slider} />
+      <Slider/>
       <Ourprocess/>
       <Industries/>
       <Weare/>
