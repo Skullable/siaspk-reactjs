@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import ReactDOM from "react-dom";
 import Slider from "./Slider";
+import Button from "./Button";
 import Button2 from "./Button2";
 
 
@@ -194,8 +195,60 @@ software:{
   backgroundImage: 'url(Images/bgimage.jpg)',
   backgroundAttachment: 'fixed',
   backgroundSize: 'cover',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+
+},
+softwarecontainer: {
+  width: '80%',
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-evenly',
+
+},
+infocard: {
+  marginTop: '150px',
+  marginBottom: '150px',
+  width: '28%',
+  height: '600px',
+  display: 'flex',
+  flexWrap: 'wrap',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: 'white',
+
+},
+softwareheading: {
+  paddingLeft: '35px',
+  paddingRight: '35px',
+  paddingTop: '35px',
+  textAlign: 'center',
+  fontSize: '23px',
+  lineHeight: '30px',
+  fontWeight: 500,
+  fontFamily: 'poppins',
+},
+softwareinfo: {
+  marginTop: '5%',
+  marginRight: '20%',
+  marginLeft: '20%',
+  textAlign: 'center',
+  fontSize: '16px',
+  lineHeight: '30px',
+  fontWeight: 300,
+  fontFamily: 'poppins',
+  color:'#7f7f7f',
 },
 
+/*-- Products --*/
+productsimg:{
+  objectFit: 'scale-down',
+  height: '120px',
+  width:'120px',  
+},
 
 
 });
@@ -275,7 +328,7 @@ function Ourprocess(){
           alt=""
         />
       </div>
-      <Button2/>
+      <Button2 type='1' txt='KNOW MORE'/>
     </div>
   );
 }
@@ -364,12 +417,97 @@ function Software() {
     <div className={classes.software}>
       <div className={classes.softwarecontainer}>
         <div className={classes.infocard}>
-          
+          <img src="Images/app-dev.png" alt="" />
+          <h5 className={classes.softwareheading}>Application Development</h5>
+          <div className={classes.softwareinfo}>We engineer digital solutions of any complexity, combining and multidisciplinary tech expertise with industry experience.</div>
+          <Button2 type='2' txt='READ MORE'/>
+        </div>
+        <div className={classes.infocard}>
+          <img src="Images/agriculture.png" alt="" />
+          <h5 className={classes.softwareheading}>Application Development</h5>
+          <div className={classes.softwareinfo}>We engineer digital solutions of any complexity, combining and multidisciplinary tech expertise with industry experience.</div>
+          <Button2 type='2' txt='READ MORE'/>
+        </div>
+        <div className={classes.infocard}>
+          <img src="Images/transport.png" alt="" />
+          <h5 className={classes.softwareheading}>Application Development</h5>
+          <div className={classes.softwareinfo}>We engineer digital solutions of any complexity, combining and multidisciplinary tech expertise with industry experience.</div>
+          <Button2 type='2' txt='READ MORE'/>
         </div>
       </div>
     </div>
   )
-}
+};
+
+function Ourproducts(){
+  const classes = useStyles();
+
+  return (
+    <div className={classes.industries}>
+      <span className={classes.industriesHeading}>Our Products</span>
+      <div className={classes.industriescontainer}>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/cart.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Packages Cart Solutions</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/diagnostics.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Smart Diagnostics</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/tubewell.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Smart Tubewell</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/smart-iot.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Smart IoT Solutions</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/delivery-pcb.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>PBC Delivery Compliance</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/fleet.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Smart Fleet (Fleet and Asset Management)</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.productsimg}
+            src="Images/real_estate.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Real Estate online Biding Platform</h5>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 
 
 export default function Homecontent() {
@@ -381,6 +519,8 @@ export default function Homecontent() {
       <Ourprocess/>
       <Industries/>
       <Weare/>
+      <Software/>
+      <Ourproducts/>
     </div>
   );
 }

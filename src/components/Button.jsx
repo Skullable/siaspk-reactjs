@@ -44,6 +44,5 @@ const useStyles = makeStyles({
 
 export default function Button(props) {
   const classes = useStyles();
-  const value = 'SEND MESSAGE'
-  return <input className={props.type == 1 ? classes.btn : classes.invert} type='submit' value={value}></input>;
+  return <input className={props.type == 1 ? classes.btn : classes.invert} type='submit' value={props.txt}></input>;
 }
