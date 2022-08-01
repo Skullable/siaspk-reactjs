@@ -69,7 +69,57 @@ const useStyles = makeStyles({
     fontSize: '16px',
     fontWeight: 300,
     lineHeight: '24px',
+  },
+
+  /*-- Industries --*/
+
+  industries:{ 
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#1f2732',
+    backgroundImage: 'Images/texture.png'
+  },
+  industriesHeading: {
+    paddingTop: '100px',
+    margin: '3%',
+    fontFamily: 'Poppins',
+    fontSize: '48px',
+    fontWeight : 500,
+    lineHeight: '43px',
+    color: '#ffff'
+  },
+  industriescontainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    width: '70%',
+    justifyContent: 'space-around'
+
+  },
+  industriesbox: {
+    width: '400px',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    padding: '50px',
+    
+  },
+  industriesimg:{
+    height: '60px',
+    width:'60px',  
+  },
+  industriesboxheading:{
+    marginTop: '10px',
+    textAlign: 'center',
+    fontFamily: 'poppins',
+    fontSize: '23px',
+    lineHeight: '30px',
+    fontWeight: 500,
+    color: 'white',
+
   }
+
 });
 
 function Ourprocess(){
@@ -154,6 +204,62 @@ function Ourprocess(){
 
 function Industries(){
   const classes = useStyles();
+
+  return (
+    <div className={classes.industries}>
+      <span className={classes.industriesHeading}>Industries</span>
+      <div className={classes.industriescontainer}>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/fleet-management.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Fleet management</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/delivery.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Delivery Compliance</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/green-house.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Green House & Tunnel Farming</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/agriculture.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Agriculture Equipment</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/transport.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>Transportation Routing</h5>
+        </div>
+        <div className={classes.industriesbox}>
+          <img
+            className={classes.industriesimg}
+            src="Images/E-commerce.png"
+            alt=""
+          />
+          <h5 className={classes.industriesboxheading}>E-commerence</h5>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 
@@ -164,6 +270,7 @@ export default function Homecontent() {
     <div className={classes.Home}>
       <Slider className={classes.slider} />
       <Ourprocess/>
+      <Industries/>
     </div>
   );
 }
