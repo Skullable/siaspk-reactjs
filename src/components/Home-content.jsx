@@ -1,9 +1,11 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import ReactDOM from "react-dom";
 import Slider from "./Slider";
 import Button from "./Button";
 import Button2 from "./Button2";
+import TextField from "@mui/joy/TextField";
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { width } from "@mui/system";
 
 
 const useStyles = makeStyles({
@@ -11,7 +13,7 @@ const useStyles = makeStyles({
     width: '100vw',
     top: "100px",
     alignItems: 'center',
-    marginBottom: "100px",
+    marginBottom: "30px",
   },
   slider: {
     height: '30%',
@@ -250,6 +252,81 @@ productsimg:{
   width:'120px',  
 },
 
+/*-- Contact Us --*/
+
+contactus:{
+  display: 'flex',
+  width: '100%',
+  backgroundColor: '#f4f4f5',
+  alignItems: 'center',
+  justifyContent: 'center'
+
+},
+span:{
+  display: 'flex',
+  fontFamily: 'poppins',
+  fontWeight: 500,
+  color: '#202833',
+  fontSize: '54px',
+  lineHeight: '48px',
+  paddingBottom: '40px'
+},
+inputmsgcontain:{
+  display: 'flex'
+},
+userinput:{
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: "column",
+  margin: '100px',
+},
+nameinput:{
+  backgroundColor:'#ffff',
+  borderRadius: '1px',
+  height: '40px',
+  width: '300px',
+  textTransform: 'uppercase',
+  margin: '10px',
+  fontFamily: 'Poppins',
+  fontWeight: 300,
+  textTransform: 'uppercase',
+
+
+},
+nameinput2:{
+  backgroundColor:'#ffff',
+  borderRadius: '1px',
+  height: '40px',
+  width: '140px',
+  textTransform: 'uppercase',
+  margin: '10px',
+  fontFamily: 'Poppins',
+  fontWeight: 300,
+  textTransform: 'uppercase',
+
+
+},
+
+
+msginput:{
+  backgroundColor:'#ffff',
+  borderRadius: '1px',
+  height: '200px',
+  width: '300px',
+  paddingRight: '100px',
+  margin: '10px',
+
+},
+mapcontainer:{
+  height: '600px',
+  width: '30%',
+  margin: '100px',
+  border: 'solid 2px black'
+},
+btn:{
+  float: 'left'
+}
+
 
 });
 
@@ -328,7 +405,7 @@ function Ourprocess(){
           alt=""
         />
       </div>
-      <Button2 type='1' txt='KNOW MORE'/>
+      <Button2 className={classes.btn} type='1' txt='KNOW MORE'/>
     </div>
   );
 }
@@ -507,6 +584,58 @@ function Ourproducts(){
   );
 };
 
+function Contactus (){
+  const classes = useStyles();
+
+  return (
+    <div className={classes.contactus}>
+      <div className={classes.userinput}>
+        <span className={classes.span}>Contact Us</span>
+        <div className={classes.inputmsgcontain}>
+          <TextField
+            className={classes.nameinput2}
+            placeholder="FULL NAME"
+            variant="solid"
+            id="fullWidth"
+          />
+          <TextField
+            className={classes.nameinput2}
+            placeholder="PHONE NUMBER"
+            variant="solid"
+          />
+        </div>
+        <TextField
+          className={classes.nameinput}
+          placeholder="EMAIL ADDRESS"
+          variant="solid"
+        />
+        <TextField
+          className={classes.msginput}
+          placeholder="YOUR MESSAGE"
+          variant="solid"
+        />
+        <Button txt='SEND MESSAGE' type='1'/>
+      </div>
+      <Map
+        className={classes.mapcontainer}
+        center={[31.50717, 74.33607]}
+        zoom={17}
+        scrollWheelZoom={false}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={[31.50717, 74.33607]}>
+          <Popup>
+            Smart A&I solutions <br /> FF 11 Center point plaza, Main Blvd
+          </Popup>
+        </Marker>
+      </Map>
+    </div>
+  );
+}
+
 
 
 
@@ -521,6 +650,7 @@ export default function Homecontent() {
       <Weare/>
       <Software/>
       <Ourproducts/>
+      <Contactus/>
     </div>
   );
 }

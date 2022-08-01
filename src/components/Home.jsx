@@ -20,7 +20,7 @@ function Home() {
     <div className={classes.about}>
       <Topbar/>
       <Homecontent/>
-      <Footer/>
+      <Footer variant='1'/>
     </div>
   );
 }
