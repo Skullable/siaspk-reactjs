@@ -21,7 +21,7 @@ function handleClick(event) {
   console.log('You clicked a breadcrumb.');
 }
 
-export default function BasicBreadcrumbs() {
+export default function BasicBreadcrumbs(props) {
   const classes = useStyles();
         const breadcrumbs = [
         <Link
@@ -35,7 +35,7 @@ export default function BasicBreadcrumbs() {
           HOME
         </Link>,
         <Typography key="3" color="text.primary" fontFamily="poppins" fontSize="small" >
-          OUR PROCESS
+          {props.name}
         </Typography>,
       ];
     

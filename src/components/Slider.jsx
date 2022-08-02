@@ -11,11 +11,18 @@ import {  makeStyles } from "@mui/material";
   }
 `;*/
 
+// const useStyles = makeStyles({
+
+//   caption:{
+//     fontSize: '20px'
+//   }
+// })
 
 export default function Slider() {
+  // const classes = useStyles();
   return (
       <Carousel fade>
-        <Carousel.Item interval={1600} touch="true">
+        <Carousel.Item interval={3000} touch="true">
           <img
             height= '100%'
             className="d-block w-100"
@@ -23,11 +30,11 @@ export default function Slider() {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
+            <h3 style={{fontSize:'80px', fontFamily: 'Poppins', fontWeight: '100', paddingBottom: '500px'}}>Smart Automation</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={1600}>
+        <Carousel.Item interval={3000}>
           <img
             className="d-block w-100"
             src="Images/development.jpg"
@@ -35,18 +42,18 @@ export default function Slider() {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3 style={{fontSize:'80px', fontFamily: 'Poppins', fontWeight: '100', paddingBottom: '500px'}}>Custom Software Development Company</h3>
+            <p>We provide turn-key software development services that add value to your business. Contact us today and transform your ideas into solutions!</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={1600}>
+        <Carousel.Item interval={3000}>
           <img
             className="d-block w-100"
             src="Images/technicalAdvisory.jpg"
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3 style={{fontSize:'80px', fontFamily: 'Poppins', fontWeight: '100', paddingBottom: '500px'}}>Technical Advisory</h3>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
