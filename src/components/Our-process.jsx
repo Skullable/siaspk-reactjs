@@ -18,8 +18,7 @@ function Ourprocess() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
-      <Topbar/>
-      <Top/>
+      <Top pagename='process'/>
       <Ourprocesscontent/>
       <Footer/>
     </div>

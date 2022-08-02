@@ -5,7 +5,6 @@ import Button from "./Button";
 import Button2 from "./Button2";
 import TextField from "@mui/joy/TextField";
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import { width } from "@mui/system";
 
 
 const useStyles = makeStyles({

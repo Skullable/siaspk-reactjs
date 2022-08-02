@@ -1,6 +1,7 @@
 
 import Topbar from './Topbar';
 import Homecontent from './Home-content';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import Footer from './Footer';
 
@@ -18,7 +19,6 @@ function Home() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
-      <Topbar/>
       <Homecontent/>
       <Footer variant='1'/>
     </div>

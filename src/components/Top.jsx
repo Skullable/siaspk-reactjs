@@ -36,7 +36,8 @@ const useStyles = makeStyles({
   },
 
   breadcrumbs:{
-    marginTop: '25px'
+    marginTop: '25px',
+    paddingRight: '25px'
   },
 
   imgcontain:{
@@ -45,7 +46,11 @@ const useStyles = makeStyles({
 
   img:{
     width: '100vw',
-    height: 'auto'
+    height: 'auto',
+    '@media (max-width:1054px)':{
+      height: '200px',
+      width: 'auto'
+   },
   }
 
 })

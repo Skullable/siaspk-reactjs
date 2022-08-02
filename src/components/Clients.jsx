@@ -18,8 +18,7 @@ function Clients() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
-      <Topbar/>
-      <Top/>
+      <Top pagename='clients'/>
       <Clientscontent/>
       <Footer/>
     </div>

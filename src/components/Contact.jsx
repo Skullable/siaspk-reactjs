@@ -15,16 +15,15 @@ const useStyles = makeStyles({
   }
 })
 
-function Page() {
+function Contact() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
-      <Topbar/>
-      <Top/>
+      <Top pagename='contact'/>
       <Contactcontent/>
       <Footer/>
     </div>
   );
 }
 
-export default Page;
+export default Contact;

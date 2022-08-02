@@ -1,7 +1,4 @@
-
-import zIndex from "@mui/material/styles/zIndex";
-import { makeStyles, propsToClassKey } from "@mui/styles"
-import { lineHeight, padding } from "@mui/system";
+import { makeStyles} from "@mui/styles"
 
 const useStyles = makeStyles({
     processes: {
@@ -12,7 +9,6 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: 'white',
         margin: '6%',
     },
     process1: {
@@ -167,11 +163,11 @@ function ProcessContainer(props) {
     return <>
         <div className={props.containernumber == 2? classes.process2 : classes.process1}>
             <div className={classes.left}>
-                <h1 className={props.index == 1 ? classes.h01 : classes.none}>0{props.index == 1 ? 1 : undefined}</h1>
-                <h1 className={props.index == 2 ? classes.h02 : classes.none}>0{props.index == 2 ? 2 : undefined}</h1>
-                <h1 className={props.index == 3 ? classes.h03 : classes.none}>0{props.index == 3 ? 3 : undefined}</h1>
-                <h1 className={props.index == 4 ? classes.h04 : classes.none}>0{props.index == 4 ? 4 : undefined}</h1>
-                <h1 className={props.index == 5 ? classes.h05 : classes.none}>0{props.index == 5 ? 5 : undefined}</h1>
+                <h1 className={props.index === 1 ? classes.h01 : classes.none}>0{props.index == 1 ? 1 : undefined}</h1>
+                <h1 className={props.index === 2 ? classes.h02 : classes.none}>0{props.index == 2 ? 2 : undefined}</h1>
+                <h1 className={props.index === 3 ? classes.h03 : classes.none}>0{props.index == 3 ? 3 : undefined}</h1>
+                <h1 className={props.index === 4 ? classes.h04 : classes.none}>0{props.index == 4 ? 4 : undefined}</h1>
+                <h1 className={props.index === 5 ? classes.h05 : classes.none}>0{props.index == 5 ? 5 : undefined}</h1>
                 <h2 className={props.containernumber == 1 ? classes.h2 : classes.h22}>{props.title}</h2>
             </div>
             <div className={classes.mid}>

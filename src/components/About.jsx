@@ -19,9 +19,8 @@ function About() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
-      <Topbar/>
       <Top pagename='about' />
-      <Info/>
+      <Info page='1'/>
       <Aboutcontent/>
       <Footer/>
     </div>

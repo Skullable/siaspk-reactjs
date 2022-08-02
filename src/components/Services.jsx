@@ -19,8 +19,7 @@ function Services() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
-      <Topbar/>
-      <Top/>
+      <Top pagename='services'/>
       <Info/>
       <Servicescontent/>
       <Footer/>

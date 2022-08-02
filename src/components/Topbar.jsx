@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -27,9 +28,10 @@ const useStyles = makeStyles({
   },
 
   list:{
+    paddingTop: '10px',
     display: 'flex',
     alignItems: 'center',
-    paddingRight: '20%',
+    justifyContent: 'center',
     fontFamily : 'Poppins',
     fontSize: '14px',
     fontWeight: 600,
@@ -38,10 +40,12 @@ const useStyles = makeStyles({
     
   },
   item:{
-    marginRight: '15%',
+    padding: '15px',
     display: 'flex',
     flexDirection: 'row',
     color: '#5ea3ce',
+    fontSize: '12px',
+    lineHeight: '0px',
     cursor: 'pointer',
     transition: 'all .5s',
 
@@ -60,6 +64,15 @@ const useStyles = makeStyles({
       opacity: 1,
       bottom: '14px',
       
+    }
+  },
+  anchor:{
+    color: '#5ea3ce',
+    textDecoration: 'none',
+    letterSpacing: '3px',
+    '&:hover':{
+      color: '#fe4973',
+      textDecoration: 'underline'
     }
   }
 
@@ -115,12 +128,12 @@ export default function Topbar(props) {
         <Toolbar className={classes.toolbar}>
          <img className={classes.logo} src="../images/logo.png" alt="" />
          <ul className={classes.list}>
-           <div className={classes.item}><a>Home</a></div>
-           <div className={classes.item}><a>About</a></div>
-           <div className={classes.item}><a>Services</a></div>
-           <div className={classes.item}><a>Clients</a></div>
-           <div className={classes.item}><a>Our Process</a></div>
-           <div className={classes.item}><a>Contact Us</a></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/">Home </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/about">About </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/services">Services </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/clients">Clients </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/ourprocess">Our Process </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/contact">Contact Us </Link></div>
          </ul>
         </Toolbar>
       </AppBar>
