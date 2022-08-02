@@ -1,4 +1,3 @@
-import Topbar from './Topbar';
 import Top from './Top';
 import Info from './Info';
 import Aboutcontent from './AboutContent';
