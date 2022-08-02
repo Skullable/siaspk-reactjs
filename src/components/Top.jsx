@@ -1,7 +1,6 @@
 import { makeStyles } from '@mui/styles'
 import BasicBreadcrumbs from './Breadcrumbs'
 
-const currentPage = '';
 const useStyles = makeStyles({
   top:{
     position: 'relative',
@@ -17,11 +16,12 @@ const useStyles = makeStyles({
   textcontain:{
     position: 'absolute',
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
     textAlign: 'center',
+    alignItems: 'center',
+    justifyContent:'center',
     zIndex: 2,
-    width: '200px',
+    width: '400px',
     top: '50px',
   },
 
@@ -37,6 +37,7 @@ const useStyles = makeStyles({
 
   breadcrumbs:{
     marginTop: '25px',
+    paddingRight: '25px'
   },
 
   imgcontain:{
@@ -44,18 +45,43 @@ const useStyles = makeStyles({
   },
 
   img:{
-    width: '100vw'
+    width: '100vw',
+    height: 'auto',
+    '@media (max-width:1054px)':{
+      height: '200px',
+      width: 'auto'
+   },
   }
 
 })
 
-export default function Topabout() {
+export default function Top(props) {
+  if (props.pagename == 'about'){
+    var renderpagename = 'About'
+    var breadcrumbname = 'ABOUT'
+  };
+  if (props.pagename == 'services'){
+    var renderpagename = 'Services'
+    var breadcrumbname = 'SERVICES'
+  };
+  if (props.pagename == 'clients'){
+    var renderpagename = 'Clients'
+    var breadcrumbname = 'CLIENTS'
+  };
+  if (props.pagename == 'process'){
+    var renderpagename = 'Our Process'
+    var breadcrumbname = 'OUR PROCESS'
+  };
+  if (props.pagename == 'contact'){
+    var renderpagename = 'Contact'
+    var breadcrumbname = 'CONTACT'
+  };
   const classes = useStyles();
   return (
     <div className={classes.top} id="top">
         <div className={classes.textcontain}>
-              <h1 className={classes.heading}>About</h1>
-              <ul className={classes.breadcrumbs}><BasicBreadcrumbs/></ul>
+              <h1 className={classes.heading}>{renderpagename}</h1>
+              <ul className={classes.breadcrumbs}><BasicBreadcrumbs name={breadcrumbname}/></ul>
         </div>
         <div className={classes.imgcontain}><img className={classes.img} src="Images/mid.jpeg" alt="" /></div>
     </div>

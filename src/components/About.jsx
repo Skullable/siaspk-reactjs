@@ -1,5 +1,4 @@
-import Topbar from './Topbar';
-import Topabout from './Top-about';
+import Top from './Top';
 import Info from './Info';
 import Aboutcontent from './AboutContent';
 import { makeStyles } from '@mui/styles';
@@ -19,9 +18,8 @@ function About() {
   const classes = useStyles();
   return (
     <div className={classes.about}>
-      <Topbar/>
-      <Topabout/>
-      <Info/>
+      <Top pagename='about' />
+      <Info page='1'/>
       <Aboutcontent/>
       <Footer/>
     </div>

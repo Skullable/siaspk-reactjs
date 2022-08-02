@@ -60,6 +60,8 @@ const useStyles = makeStyles({
 
 export default function Aboutcontent() {
     const classes = useStyles();
+  //  const ourMediaQuery = useMediaQuery('(min-width:400px)');
+
   return (
     <div className={classes.content}>
             <div className={classes.containers}>
