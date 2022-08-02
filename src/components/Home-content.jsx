@@ -401,7 +401,7 @@ function Ourprocess(){
           alt=""
         />
       </div>
-      <Button2 className={classes.btn} type='1' txt='KNOW MORE'/>
+      <Button2 a='/about' className={classes.btn} type='1' txt='KNOW MORE'/>
     </div>
   );
 }
@@ -493,19 +493,19 @@ function Software() {
           <img src="Images/app-dev.png" alt="" />
           <h5 className={classes.softwareheading}>Application Development</h5>
           <div className={classes.softwareinfo}>We engineer digital solutions of any complexity, combining and multidisciplinary tech expertise with industry experience.</div>
-          <Button2 type='2' txt='READ MORE'/>
+          <Button2 a='/about' type='2' txt='READ MORE'/>
         </div>
         <div className={classes.infocard}>
           <img src="Images/agriculture.png" alt="" />
           <h5 className={classes.softwareheading}>Application Development</h5>
           <div className={classes.softwareinfo}>We engineer digital solutions of any complexity, combining and multidisciplinary tech expertise with industry experience.</div>
-          <Button2 type='2' txt='READ MORE'/>
+          <Button2 a='/about' type='2' txt='READ MORE'/>
         </div>
         <div className={classes.infocard}>
           <img src="Images/transport.png" alt="" />
           <h5 className={classes.softwareheading}>Application Development</h5>
           <div className={classes.softwareinfo}>We engineer digital solutions of any complexity, combining and multidisciplinary tech expertise with industry experience.</div>
-          <Button2 type='2' txt='READ MORE'/>
+          <Button2 a='/about' type='2' txt='READ MORE'/>
         </div>
       </div>
     </div>

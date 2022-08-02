@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { makeStyles } from '@mui/styles';
-import { lineHeight } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   btn: {
@@ -61,5 +61,5 @@ const useStyles = makeStyles({
 export default function Button2(props) {
   const classes = useStyles();
   const value = <div className={classes.text}>{props.txt}</div>
-  return <a href={props.a} className={props.type == 1 ? classes.btn : classes.invert}   style={{textDecoration: 'none'}} >{value}</a>;
+  return <Link to={props.a} className={props.type == 1 ? classes.btn : classes.invert}   style={{textDecoration: 'none'}} >{value}</Link>;
 }

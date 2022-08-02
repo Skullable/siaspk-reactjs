@@ -126,7 +126,7 @@ export default function Topbar(props) {
       <CssBaseline />
       <AppBar className={classes.topbar}>
         <Toolbar className={classes.toolbar}>
-         <img className={classes.logo} src="../images/logo.png" alt="" />
+         <Link to='/'><img className={classes.logo} src="../images/logo.png" alt="" /></Link>
          <ul className={classes.list}>
            <div className={classes.item}><Link className={classes.anchor} to="/">Home </Link></div>
            <div className={classes.item}><Link className={classes.anchor} to="/about">About </Link></div>

@@ -8,11 +8,6 @@ import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import { AccessTimeSharp } from "@mui/icons-material";
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-//import { Map, TileLayer } from 'react-leaflet';
-//import { useState } from "react";
-//import osm from "./osm";
-//import { useRef } from "react";
-//import 'leaflet/dist/leaflet-src.esm'
 
 
 
@@ -135,12 +130,6 @@ const useStyles = makeStyles({
 
 export default function Contactcontent() {
     const classes = useStyles();
-/*--    var map = L.map('map').setView([51.505, -0.09], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-     maxZoom: 19,
-     attribution: '© OpenStreetMap'
-    }).addTo(map);
-    var marker = L.marker([51.5, -0.09]).addTo(map); --*/
 
     return (
         <div className={classes.contact}>
@@ -181,35 +170,3 @@ export default function Contactcontent() {
         </div>
     )
 }
-
-
-//function ClientContainer(props) {
-//    const classes = useStyles();
- //   return <>
- //       <div className={props.containterNumber == 1 ? classes.client1 : classes.client2}>
-  //          <img className={classes.img} src={props.path} alt="" />
-   //         <h6 className={classes.h6}>{props.text}</h6>
-  //      </div>
-//    </>
-
-//const BasicMap = () => {
-//    const [center, setCenter] = useState({ lat:74.31903879 ,lng:31.50359603 });
-//    const ZOOM_LEVEL = 9;
- //   const mapRef = useRef();
-  //  const classes = useStyles();
-  //  return(
-  //  <div className={classes.mapcontain}>
-  //      <Map center={center}
-  //       zoom={ZOOM_LEVEL}>
- ////           <TileLayer 
-  //          url={osm.maptiler.url} 
-  //          attribution={osm.maptiler.attribution}/>
- ////       </Map>
- //////    </div> 
- //    ) 
-//} 
-
-//<TextField className={classes.nameinput} placeholder='Full Name' variant="solid"/>
-//<TextField className={classes.nameinput} placeholder="Phone Number" variant="solid"/>
-//<TextField className={classes.nameinput} placeholder="Email Address" variant="solid"/>
-//<TextField className={classes.msginput} placeholder="Your Message" variant="solid"/>
