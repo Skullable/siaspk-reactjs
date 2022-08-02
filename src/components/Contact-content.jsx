@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import Button from "@mui/material/Button";
 import TextField from "@mui/joy/TextField";
 import Hook from "./Button";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -50,13 +49,10 @@ const useStyles = makeStyles({
     },
     textcontainer:{
         display: 'flex',
-        alignItems: 'center',
+        flexDirection: 'row',
+        alignItems: 'start',
         padding: '10px',
-    },
-    textcontainer2:{
-        display: 'flex',
-        justifyContent: 'sapce-between',
-        alignItems: 'center',
+
     },
 
     p:{
@@ -123,6 +119,11 @@ const useStyles = makeStyles({
 
     },
     icons:{
+        margin: '2px',
+        color: '#1d73be'
+    },
+    icons2:{
+        margin: '7px',
         color: '#1d73be'
     }
 })
@@ -133,12 +134,12 @@ export default function Contactcontent() {
 
     return (
         <div className={classes.contact}>
-            <Map className={classes.mapcontainer} center={[31.50717, 74.33607]} zoom={17} scrollWheelZoom={false}>
+            <Map className={classes.mapcontainer} center={[31.5036, 74.31906]} zoom={17} scrollWheelZoom={false}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={[31.50717, 74.33607]}>
+                <Marker position={[31.5036, 74.31906]}>
                     <Popup>
                         Smart A&I solutions <br /> FF 11 Center point plaza, Main Blvd
                     </Popup>
@@ -156,7 +157,7 @@ export default function Contactcontent() {
             <div className={classes.contactdata}>
                 <div className={classes.contactinfo}>
                  <span className={classes.span}>Contact Info</span>
-                 <div className={classes.textcontainer}> <LocationOnIcon className={classes.icons} fontSize='12'/> <p className={classes.p}> FF 11 Center point plaza, Main Blvd, Block E 2 Gulberg III, Lahore, Punjab</p> </div>
+                 <div className={classes.textcontainer}> <LocationOnIcon className={classes.icons2} fontSize='12'/> <p className={classes.p}> FF 11 Center point plaza, Main Blvd, Block E 2 Gulberg III, Lahore, Punjab</p> </div>
                  <div className={classes.textcontainer}> <CallIcon className={classes.icons} fontSize='12'/> <p className={classes.p}>	+92 311 1555082</p> </div>
                  <div className={classes.textcontainer}> <EmailIcon className={classes.icons} fontSize='12'/> <p className={classes.p}> info@saispk.com</p> </div>
                 </div>
