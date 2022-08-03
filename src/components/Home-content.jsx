@@ -96,8 +96,8 @@ const useStyles = makeStyles({
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'row',
-    width: '90%',
-    justifyContent: 'center',
+    width: '70%',
+    justifyContent: 'space-around',
     marginBottom: '100px',
 
   },
@@ -107,7 +107,7 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
     alignItems: 'center',
     flexDirection: 'column',
-    margin: '50px',
+    margin: '40px',
     
   },
   industriesimg:{
