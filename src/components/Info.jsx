@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     },
     info:{
         marginTop: '50px',
-        padding: '20px',
+        padding: '50px',
         position: 'relative',
         justifyContent: 'center',
         width: '60%',

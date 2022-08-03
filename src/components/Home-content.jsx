@@ -614,7 +614,7 @@ function Contactus (){
       </div>
       <Map
         className={classes.mapcontainer}
-        center={[31.50717, 74.33607]}
+        center={[31.5036, 74.31906]}
         zoom={17}
         scrollWheelZoom={false}
       >
@@ -622,7 +622,7 @@ function Contactus (){
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[31.50717, 74.33607]}>
+        <Marker position={[31.5036, 74.31906]}>
           <Popup>
             Smart A&I solutions <br /> FF 11 Center point plaza, Main Blvd
           </Popup>
