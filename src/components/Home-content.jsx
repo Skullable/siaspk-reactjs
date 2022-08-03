@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
     width: '100%',
   },
   processcontainer: {
@@ -25,7 +26,6 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'row',
     width: '80%',
-  
     justifyContent: 'center',
 
   },

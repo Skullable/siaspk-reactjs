@@ -21,7 +21,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         height: '700px',
         width: '85%',
-        margin: '50px',
+        margin: '100px',
         border: 'solid 2px #808080'
     },
     h2:{
