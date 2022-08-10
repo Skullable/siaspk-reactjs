@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     },
     left:{
         alignItems: 'center',
-        diplay: 'flex',
+        display: 'flex',
         flexWrap: 'wrap',
         flex: 1,
         padding: '20px'
@@ -45,7 +45,7 @@ const useStyles = makeStyles({
         justifyContent: 'space-around',
     },
     right:{
-        diplay: 'flex',
+        display: 'inline',
         flex:1,
         alignItems: 'center',
         justifyContent: 'space-around',
@@ -100,6 +100,7 @@ const useStyles = makeStyles({
         height: '5%',
     },
     h01:{
+        opacity: 1,
         top: '80px',
         position: 'relative',
         padding: '30px',
@@ -154,7 +155,43 @@ const useStyles = makeStyles({
     none:{
         opacity: 0,
         position: "absolute",
-    }
+    },
+    '@media (max-width:990px)':{
+        process1:{
+            flexDirection: 'column'
+        },
+        process2:{
+            flexDirection: 'column',
+        },
+        img:{
+            marginBottom: '40px'
+        },
+        img2:{ 
+            display: 'none',
+        },
+        h01:{
+            fontSize:'100px',
+        },
+        h02:{
+            fontSize:'100px',
+        },
+        h03:{
+            fontSize:'100px',
+        },
+        h04:{
+            fontSize:'100px',
+        },
+        h05:{
+            fontSize:'100px',
+        },
+        h2:{
+            fontSize:'40px',
+        },
+        h22:{
+            fontSize:'40px',
+        },
+
+    }, 
 })
 
 
@@ -163,11 +200,11 @@ function ProcessContainer(props) {
     return <>
         <div className={props.containernumber == 2? classes.process2 : classes.process1}>
             <div className={classes.left}>
-                <h1 className={props.index === 1 ? classes.h01 : classes.none}>0{props.index == 1 ? 1 : undefined}</h1>
-                <h1 className={props.index === 2 ? classes.h02 : classes.none}>0{props.index == 2 ? 2 : undefined}</h1>
-                <h1 className={props.index === 3 ? classes.h03 : classes.none}>0{props.index == 3 ? 3 : undefined}</h1>
-                <h1 className={props.index === 4 ? classes.h04 : classes.none}>0{props.index == 4 ? 4 : undefined}</h1>
-                <h1 className={props.index === 5 ? classes.h05 : classes.none}>0{props.index == 5 ? 5 : undefined}</h1>
+                <h1 className={props.index == 1 ? classes.h01 : classes.none}>0{props.index == 1 ? 1 : undefined}</h1>
+                <h1 className={props.index == 2 ? classes.h02 : classes.none}>0{props.index == 2 ? 2 : undefined}</h1>
+                <h1 className={props.index == 3 ? classes.h03 : classes.none}>0{props.index == 3 ? 3 : undefined}</h1>
+                <h1 className={props.index == 4 ? classes.h04 : classes.none}>0{props.index == 4 ? 4 : undefined}</h1>
+                <h1 className={props.index == 5 ? classes.h05 : classes.none}>0{props.index == 5 ? 5 : undefined}</h1>
                 <h2 className={props.containernumber == 1 ? classes.h2 : classes.h22}>{props.title}</h2>
             </div>
             <div className={classes.mid}>
