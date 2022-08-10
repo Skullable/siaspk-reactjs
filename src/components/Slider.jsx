@@ -29,7 +29,7 @@ const Img = styled.img`
       transform: scale(1);
     }
   }
-  animation: zoom 8.3s infinite;
+  animation: zoom 27s infinite;
   trasnsition: 'all smooth',
 `;
 const Wrapper = styled.div`

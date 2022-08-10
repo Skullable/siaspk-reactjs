@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     process1: {
         display: 'flex',
         flexWrap: 'wrap',
-        width: '80%',
+        maxWidth: '1000px',
         position: 'relative',
         overflow: 'hidden',
         alignItems: 'center',
@@ -31,10 +31,11 @@ const useStyles = makeStyles({
     },
     left:{
         alignItems: 'center',
+        justifyContent: 'space-between',
         display: 'flex',
         flexWrap: 'wrap',
         flex: 1,
-        padding: '20px'
+        margin: '20px'
     },
     mid:{
         display: 'flex',
@@ -45,13 +46,15 @@ const useStyles = makeStyles({
         justifyContent: 'space-around',
     },
     right:{
-        display: 'inline',
+        display: 'block',
+        maxHeight: '500px',
         flex:1,
         alignItems: 'center',
         justifyContent: 'space-around',
     },
 
     h2: {
+        display: 'flex',
         position: 'relative',
         fontFamily: 'poppins',
         fontSize: '48px',
@@ -65,6 +68,7 @@ const useStyles = makeStyles({
         zIndex: 2,
     },
     h22: {
+        display: 'flex',
         position: 'relative',
         fontFamily: 'poppins',
         fontSize: '48px',
@@ -140,7 +144,7 @@ const useStyles = makeStyles({
         fontFamily: 'poppins',
         fontWeight: 600,
         color:'#f1894c',
-        padding: '20%'
+        padding: '50px'
 
     },
     h05:{
@@ -156,12 +160,14 @@ const useStyles = makeStyles({
         opacity: 0,
         position: "absolute",
     },
-    '@media (max-width:990px)':{
+    '@media (max-width:900px)':{
         process1:{
-            flexDirection: 'column'
+            flexDirection: 'column',
+            maxWidth: '60%,'
         },
         process2:{
             flexDirection: 'column',
+            maxWidth: '60%,'
         },
         img:{
             marginBottom: '40px'
@@ -177,6 +183,7 @@ const useStyles = makeStyles({
         },
         h03:{
             fontSize:'100px',
+            padding: '30px',
         },
         h04:{
             fontSize:'100px',
@@ -185,11 +192,14 @@ const useStyles = makeStyles({
             fontSize:'100px',
         },
         h2:{
-            fontSize:'40px',
+            fontSize:'38px',
         },
         h22:{
-            fontSize:'40px',
+            fontSize:'38px',
         },
+        left:{
+            justifyContent: 'center',
+        }
 
     }, 
 })
@@ -205,14 +215,14 @@ function ProcessContainer(props) {
                 <h1 className={props.index == 3 ? classes.h03 : classes.none}>0{props.index == 3 ? 3 : undefined}</h1>
                 <h1 className={props.index == 4 ? classes.h04 : classes.none}>0{props.index == 4 ? 4 : undefined}</h1>
                 <h1 className={props.index == 5 ? classes.h05 : classes.none}>0{props.index == 5 ? 5 : undefined}</h1>
-                <h2 className={props.containernumber == 1 ? classes.h2 : classes.h22}>{props.title}</h2>
+                <div className={props.containernumber == 1 ? classes.h2 : classes.h22}>{props.title}</div>
             </div>
             <div className={classes.mid}>
              <img className={classes.img}  src={props.path} alt="" />
              <img className={props.img == 1 ? classes.img2 : classes.none} src={props.containernumber == 1 ? 'Images/currly-arrow-flipped.png' : 'Images/currly-arrow.png'} alt=''/>
             </div>
             <div className={classes.right}>
-             <p className={classes.info}>{props.info}</p>
+             <div className={classes.info}>{props.info}</div>
             </div>
         </div>
     </>

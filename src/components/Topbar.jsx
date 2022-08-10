@@ -74,7 +74,21 @@ const useStyles = makeStyles({
       color: '#fe4973',
       textDecoration: 'underline'
     }
-  }
+  },
+  toggle: {
+    width: '60px',
+    height: '60px',
+    cursor: 'pointer',
+    display: 'none',
+  },
+  '@media (max-width:990px)':{
+    list:{
+        display: 'none',
+    },
+    toggle:{
+      display: 'block',
+    }
+  },
 
 
 })
@@ -119,12 +133,12 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-export default function Topbar(props) {
+export default function Topbar({props, menuOpen, setMenuOpen}) {
   const classes = useStyles();
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar className={classes.topbar}>
+      <AppBar>
         <Toolbar className={classes.toolbar}>
          <Link to='/'><img className={classes.logo} src="../images/logo.png" alt="" /></Link>
          <ul className={classes.list}>
@@ -135,6 +149,7 @@ export default function Topbar(props) {
            <div className={classes.item}><Link className={classes.anchor} to="/ourprocess">Our Process </Link></div>
            <div className={classes.item}><Link className={classes.anchor} to="/contact">Contact Us </Link></div>
          </ul>
+         <img className={classes.toggle} src="Images/toggle.jpeg" alt="" onClick={()=>setMenuOpen(!menuOpen)} />
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

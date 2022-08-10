@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import Ourprocess from "./components/Our-process";
 import { makeStyles } from "@mui/styles";
 import Topbar from "./components/Topbar";
+import Menu from "./components/Menu";
 import { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
