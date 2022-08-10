@@ -47,8 +47,8 @@ const useStyles = makeStyles({
   img:{
     width: '100vw',
     height: 'auto',
-    '@media (max-width:1054px)':{
-      height: '200px',
+    '@media (max-width:1400px)':{
+      height: '216px',
       width: 'auto'
    },
   }

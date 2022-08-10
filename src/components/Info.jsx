@@ -29,6 +29,11 @@ const useStyles = makeStyles({
         fontSize: '42px',
         fontWeight: 300,
         lineHeight: '42px',
+    },
+    '@media (max-width:780px)':{
+      info:{
+        width: '100%',
+      }
     }
 })
 
