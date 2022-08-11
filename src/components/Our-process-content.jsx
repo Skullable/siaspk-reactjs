@@ -14,20 +14,22 @@ const useStyles = makeStyles({
     process1: {
         display: 'flex',
         flexWrap: 'wrap',
-        maxWidth: '1000px',
+        maxWidth: '1200px',
         position: 'relative',
         overflow: 'hidden',
         alignItems: 'center',
         justifyContent: 'space-around',
+        margin: '30px'
     },
     process2:{
         display: 'flex',
         flexDirection: 'row-reverse',
-        width: '80%',
+        maxWidth: '1200px',
         position: 'relative',
         overflow: 'hidden',
         alignItems: 'center',
         justifyContent: 'space-around',
+        margin: '30px'
     },
     left:{
         alignItems: 'center',
@@ -47,7 +49,7 @@ const useStyles = makeStyles({
     },
     right:{
         display: 'block',
-        maxHeight: '500px',
+        maxHeight: '600px',
         flex:1,
         alignItems: 'center',
         justifyContent: 'space-around',
@@ -124,7 +126,7 @@ const useStyles = makeStyles({
         fontFamily: 'poppins',
         fontWeight: 600,
         color:'#a1ce4e',
-        padding: '20%'
+        padding: '50px'
 
     },
     h03:{
@@ -160,17 +162,39 @@ const useStyles = makeStyles({
         opacity: 0,
         position: "absolute",
     },
-    '@media (max-width:900px)':{
+    '@media (max-width:1080px)': {
+        img:{
+            marginBottom: '40px',
+        },
+        img2:{
+            display: 'none'
+        },
         process1:{
             flexDirection: 'column',
-            maxWidth: '60%,'
+            maxWidth: '800px',
+            margin: '50px',
         },
         process2:{
             flexDirection: 'column',
-            maxWidth: '60%,'
+            maxWidth: '800px',
+            margin: '50px',
+        },
+    },
+    '@media (max-width:990px)':{
+        process1:{
+            flexDirection: 'column',
+            maxWidth: '400px',
+            margin: '50px',
+        },
+        process2:{
+            flexDirection: 'column',
+            maxWidth: '400px',
+            margin: '50px',
         },
         img:{
-            marginBottom: '40px'
+            marginBottom: '40px',
+            height: '150px',
+            width: '250px',
         },
         img2:{ 
             display: 'none',
@@ -192,13 +216,16 @@ const useStyles = makeStyles({
             fontSize:'100px',
         },
         h2:{
-            fontSize:'38px',
+            fontSize:'36px',
         },
         h22:{
-            fontSize:'38px',
+            fontSize:'36px',
         },
         left:{
             justifyContent: 'center',
+        },
+        info:{
+            textAlign: 'center',
         }
 
     }, 
