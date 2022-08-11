@@ -20,6 +20,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     height: '100px',
+    zIndex: 5,
 
 
   },
@@ -133,19 +134,8 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-export default function Topbar({props, openMenu}) {
+export default function Topbar({props,menuOpen,setMenuOpen}) {
   const classes = useStyles();
-  const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      '#back-to-top-anchor',
-    );
-
-    if (anchor) {
-      anchor.scrollIntoView({
-        block: 'center',
-      });
-    }
-  };
   return (
     <React.Fragment>
       <CssBaseline />
@@ -153,14 +143,14 @@ export default function Topbar({props, openMenu}) {
         <Toolbar className={classes.toolbar}>
          <Link to='/'><img className={classes.logo} src="Images/logo.png" alt="" /></Link>
          <ul className={classes.list}>
-           <div className={classes.item}><Link className={classes.anchor} onClick={handleClick} to="/">Home </Link></div>
-           <div className={classes.item}><Link className={classes.anchor} onClick={handleClick} to="/about">About </Link></div>
-           <div className={classes.item}><Link className={classes.anchor} onClick={handleClick} to="/services">Services </Link></div>
-           <div className={classes.item}><Link className={classes.anchor} onClick={handleClick} to="/clients">Clients </Link></div>
-           <div className={classes.item}><Link className={classes.anchor} onClick={handleClick} to="/ourprocess">Our Process </Link></div>
-           <div className={classes.item}><Link className={classes.anchor} onClick={handleClick} to="/contact">Contact Us </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/">Home </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/about">About </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/services">Services </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/clients">Clients </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/ourprocess">Our Process </Link></div>
+           <div className={classes.item}><Link className={classes.anchor} to="/contact">Contact Us </Link></div>
          </ul>
-         <img className={classes.toggle} src="Images/toggle.jpeg" alt="" onClick={openMenu} />
+         <img className={classes.toggle} src="Images/toggle.jpeg" alt="" onClick={()=>setMenuOpen(!menuOpen)} />
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

@@ -21,14 +21,12 @@ const useStyles = makeStyles({
 
 function App() {
   const classes = useStyles();
-  const {menu, setMenu} = useState(false)
-  const toggleMenu = () => {
-    setMenu((prevState) => !prevState) 
-  }
+  const [menuOpen,setMenuOpen] = useState (false)
   return (
     <div className={classes.app}>
       <Router>
-        <Topbar openMenu={togglemenu}  />
+        <Topbar  menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <Switch>
           <div className={classes.content}>
           <Route exact path="/">
