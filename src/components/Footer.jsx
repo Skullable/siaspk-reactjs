@@ -2,17 +2,19 @@ import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
   footer:{
+    display: 'flex',
     textAlign: 'center',
     width: '100%',
     height: '10%',
     borderTop: 'solid black 1px',
     position: 'relative',
     bottom: '30px',
+    justifyContent: 'center'
   },
   footer2:{
     textAlign: 'center',
     width: '100%',
-    height: '10%',
+    height: '100px',
     position: 'relative',
     bottom: '30px',
   },
@@ -22,7 +24,7 @@ const useStyles = makeStyles({
     lineHeight: '30px',
     fontWeight: 600,
     letterSpacing: '3px',
-    paddingTop: '2%',
+    paddingTop: '3%',
     color: '#ff497c',
     fontFamily: 'Poppins'
   }
