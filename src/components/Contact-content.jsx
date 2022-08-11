@@ -32,12 +32,6 @@ const useStyles = makeStyles({
         width: '90%',
         justifyContent: 'space-between',
     },
-    '@media (max-width:1024px)':{
-        contactfield:{
-            flexDirection: 'column'
-
-        }
-    },
     span:{
         display: 'flex',
         fontFamily: 'poppins',
@@ -52,9 +46,9 @@ const useStyles = makeStyles({
         flexDirection: 'row',
         alignItems: 'start',
         padding: '10px',
-
+        
     },
-
+    
     p:{
         fontFamily: 'poppins',
         fontSize: '16px',
@@ -68,7 +62,6 @@ const useStyles = makeStyles({
         fontSize: '16px',
         fontWeight: 300,
         lineHeight: '21px',
-        paddingLeft: '10px',
         color: '#7f7f7f',
         paddingLeft: '50px',
     },
@@ -76,7 +69,9 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: "column",
         flex:3,
-        margin: '20px',
+        marginTop: '20px',
+        marginRight: '20px',
+        marginBottom: '20px',
     },
     contactdata:{
         display: 'flex',
@@ -98,14 +93,14 @@ const useStyles = makeStyles({
         backgroundColor:'#efefef',
         borderRadius: '1px',
         height: '40px',
-        width: '600px',
+        maxWidth: '650px',
         textTransform: 'uppercase',
         margin: '10px',
         fontFamily: 'Poppins',
         fontWeight: 300,
         textTransform: 'uppercase',
 
-
+        
     },
 
     
@@ -113,7 +108,7 @@ const useStyles = makeStyles({
         backgroundColor:'#efefef',
         borderRadius: '1px',
         height: '300px',
-        width: '600px',
+        maxWidth: '650px',
         paddingRight: '100px',
         margin: '10px',
 
@@ -125,13 +120,25 @@ const useStyles = makeStyles({
     icons2:{
         margin: '7px',
         color: '#1d73be'
+    },
+    '@media (max-width:1024px)':{
+        contactfield:{
+            flexDirection: 'column'
+    
+        },
+    },
+    
+    '@media (max-width:669px)': {
+        mapcontainer:{
+            width: '70%',
+        }
     }
 })
 
 
 export default function Contactcontent() {
     const classes = useStyles();
-
+    
     return (
         <div className={classes.contact}>
             <Map className={classes.mapcontainer} center={[31.5036, 74.31906]} zoom={17} scrollWheelZoom={false}>
@@ -152,7 +159,7 @@ export default function Contactcontent() {
              <TextField className={classes.nameinput} placeholder='PHONE NUMBER' variant="solid"/>
              <TextField className={classes.nameinput} placeholder='EMAIL ADDRESS' variant="solid"/>
              <TextField className={classes.msginput} placeholder='YOUR MESSAGE' variant="solid"/>
-             <Hook/>
+             <Hook type='1'/>
             </div>
             <div className={classes.contactdata}>
                 <div className={classes.contactinfo}>
