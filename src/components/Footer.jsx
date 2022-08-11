@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     lineHeight: '30px',
     fontWeight: 600,
     letterSpacing: '3px',
-    paddingTop: '3%',
+    paddingTop: '3.5%',
     color: '#ff497c',
     fontFamily: 'Poppins'
   }

@@ -3,14 +3,14 @@ import { makeStyles } from "@mui/styles"
 const useStyles = makeStyles({
     services:{
         backgroundColor: 'white',
-        height: '500vh',
         width: '100%',
         top: '40px',
         overflowX: 'hidden',
         position: 'relavtive',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-around',
     },
     service1:{
         display: 'flex',
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
         position: 'relative',
         overflow: 'hidden',
         justifyContent: 'center',
-        padding: '20px',
+        margin: '20px',
 
     },
     service2:{
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         position: 'relative',
         overflow: 'hidden',
         justifyContent: 'center',
-        padding: '20px',
+        margin: '20px',
     },
 
     left:{
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     },
 
     right:{
-        flex: 1,
+        flex : 1,
         display: 'flex',
         overflow: "hidden",
         alignItems: 'center',
@@ -87,10 +87,10 @@ const useStyles = makeStyles({
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
-        width: '85%',
+        maxWidth: '1140px',
         padding: '40px',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
     },
     imgcontainer:{
         display: 'flex',
@@ -99,8 +99,8 @@ const useStyles = makeStyles({
         margin: '15px'
     },
     img2:{
-        height: '180px',
-        width: '180px',
+        height: '150px',
+        width: '150px',
         objectFit: 'contain'
     },
     h6:{
@@ -126,18 +126,42 @@ const useStyles = makeStyles({
             height: 'auto',
             width: '80%',
             padding: '5px'
+        },
+        img2:{
+            height: '120px',
+            width: '110px',
+        }
+    },
+    '@media (max-width:770px)':{
+        service1: {
+            flexDirection: 'column',
+            maxWidth: '470px',
+        },
+        service2:{
+            flexDirection: 'column-reverse',
+            maxWidth: '470px',
+        },
+        img:{
+            objectFit: 'contain',
+            height: 'auto',
+            width: '80%',
+            padding: '5px'
+        },
+        img2:{
+            height: '120px',
+            width: '110px',
         }
     }
 
 })
 function Imagecontainer(props) {
     const classes = useStyles();
-    return(
-        <div className={classes.imgcontainer}>
-                  <img className={classes.img2} src={props.path} alt="" />
-                  <h6 className={classes.h6}>{props.text}</h6>
-        </div>
-    )
+    return (
+      <div className={classes.imgcontainer}>
+        <img className={classes.img2} src={props.path} alt="" />
+        <h6 className={classes.h6}>{props.text}</h6>
+      </div>
+    );
 }
 
 export default function Servicescontent() {
