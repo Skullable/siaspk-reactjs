@@ -9,6 +9,7 @@ import Topbar from "./components/Topbar";
 import Menu from "./components/Menu";
 import { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useState } from "react";
 
 const useStyles = makeStyles({
   app:{
@@ -20,10 +21,14 @@ const useStyles = makeStyles({
 
 function App() {
   const classes = useStyles();
+  const {menu, setMenu} = useState(false)
+  const toggleMenu = () => {
+    setMenu((prevState) => !prevState) 
+  }
   return (
     <div className={classes.app}>
       <Router>
-        <Topbar />
+        <Topbar openMenu={togglemenu}  />
         <Switch>
           <div className={classes.content}>
           <Route exact path="/">

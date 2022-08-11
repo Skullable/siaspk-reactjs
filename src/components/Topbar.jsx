@@ -133,7 +133,7 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-export default function Topbar({props, menuOpen, setMenuOpen}) {
+export default function Topbar({props, openMenu}) {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -149,7 +149,7 @@ export default function Topbar({props, menuOpen, setMenuOpen}) {
            <div className={classes.item}><Link className={classes.anchor} to="/ourprocess">Our Process </Link></div>
            <div className={classes.item}><Link className={classes.anchor} to="/contact">Contact Us </Link></div>
          </ul>
-         <img className={classes.toggle} src="Images/toggle.jpeg" alt="" onClick={()=>setMenuOpen(!menuOpen)} />
+         <img className={classes.toggle} src="Images/toggle.jpeg" alt="" onClick={openMenu} />
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

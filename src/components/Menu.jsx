@@ -22,6 +22,7 @@ const useStyles = makeStyles({
 })
 
 export default function Menu({ menuOpen, setMenuOpen }) {
+
     const classes = useStyles()
     return (
       <div className={classes.menu + (menuOpen && 'active')}>
