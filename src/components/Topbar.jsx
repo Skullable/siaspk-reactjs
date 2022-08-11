@@ -140,7 +140,7 @@ export default function Topbar({props, menuOpen, setMenuOpen}) {
       <CssBaseline />
       <AppBar>
         <Toolbar className={classes.toolbar}>
-         <Link to='/'><img className={classes.logo} src="../images/logo.png" alt="" /></Link>
+         <Link to='/'><img className={classes.logo} src="Images/logo.png" alt="" /></Link>
          <ul className={classes.list}>
            <div className={classes.item}><Link className={classes.anchor} to="/">Home </Link></div>
            <div className={classes.item}><Link className={classes.anchor} to="/about">About </Link></div>
