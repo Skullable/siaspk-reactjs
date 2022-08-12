@@ -12,6 +12,7 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 
 const useStyles = makeStyles({
     contact:{
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -20,7 +21,7 @@ const useStyles = makeStyles({
     mapcontainer: {
         alignItems: 'center',
         height: '700px',
-        width: '85%',
+        width: '65%',
         margin: '100px',
         border: 'solid 2px #808080'
     },
@@ -29,8 +30,7 @@ const useStyles = makeStyles({
     },
     contactfield:{
         display: "flex",
-        width: '90%',
-        justifyContent: 'space-between',
+        width: '65%',
     },
     span:{
         display: 'flex',
@@ -93,7 +93,7 @@ const useStyles = makeStyles({
         backgroundColor:'#efefef',
         borderRadius: '1px',
         height: '40px',
-        maxWidth: '650px',
+        maxWidth: '740px',
         textTransform: 'uppercase',
         margin: '10px',
         fontFamily: 'Poppins',
@@ -108,7 +108,7 @@ const useStyles = makeStyles({
         backgroundColor:'#efefef',
         borderRadius: '1px',
         height: '300px',
-        maxWidth: '650px',
+        maxWidth: '740px',
         paddingRight: '100px',
         margin: '10px',
 
@@ -131,6 +131,9 @@ const useStyles = makeStyles({
     '@media (max-width:669px)': {
         mapcontainer:{
             width: '70%',
+        },
+        p2:{ 
+            paddingLeft: '25px'
         }
     }
 })
