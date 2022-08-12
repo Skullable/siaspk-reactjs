@@ -18,6 +18,24 @@ import {  makeStyles } from "@mui/material";
 //   }
 // })
 const Img = styled.img`
+  height: 70%;
+  @keyframes zoom {
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.3);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  animation: zoom 27s infinite;
+  trasnsition: 'all smooth',
+`;
+const Img2 = styled.img`
+  width: 1920;
+  height: 1080px;
   @keyframes zoom {
     0%{
       transform: scale(1);
@@ -34,7 +52,7 @@ const Img = styled.img`
 `;
 const Wrapper = styled.div`
   display: flex;
-  justify-content: 'center'
+  justify-content: center;
 `;
 
 export default function Slider() {
@@ -43,7 +61,6 @@ export default function Slider() {
     <Carousel fade>
       <Carousel.Item interval={3000} touch="true">
         <Img
-          height="100%"
           className="d-block w-100"
           src="Images/slider1.jpg"
           alt="First slide"
@@ -54,7 +71,7 @@ export default function Slider() {
               fontSize: "80px",
               fontFamily: "Poppins",
               fontWeight: "100",
-              paddingBottom: "100px",
+//              paddingBottom: "100px",
             }}
           >
             Smart Automation
@@ -63,10 +80,10 @@ export default function Slider() {
             style={{
               fontFamily: "Poppins",
               fontSize: "20px",
-              paddingBottom: "300px",
+//              paddingBottom: "300px",
               fontWeight: "100",
             }}
-          >
+            >
             We consult on and implement intelligent software for businesses
             looking to upgrade their digital ecosystems with more powerful and
             scalable solutions designed to fit their particular processes. In
@@ -84,7 +101,6 @@ export default function Slider() {
           alignItems: "center",
         }}
       >
-        <Wrapper>
           <Img
             className="d-block w-100"
             src="Images/development.jpg"
@@ -97,7 +113,7 @@ export default function Slider() {
                 fontSize: "80px",
                 fontFamily: "Poppins",
                 fontWeight: "100",
-                paddingBottom: "100px",
+                paddingBottom: "30%",
               }}
             >
               Custom Software Development Company
@@ -106,7 +122,7 @@ export default function Slider() {
               style={{
                 fontFamily: "Poppins",
                 fontSize: "20px",
-                paddingBottom: "300px",
+                paddingBottom: "30%",
                 fontWeight: "100",
               }}
             >
@@ -115,7 +131,6 @@ export default function Slider() {
               solutions!
             </p>
           </Carousel.Caption>
-        </Wrapper>
       </Carousel.Item>
       <Carousel.Item interval={3000}>
         <Img
