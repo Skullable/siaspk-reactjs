@@ -87,13 +87,9 @@ const useStyles = makeStyles({
       justiifyContent: 'space-around'
     },
   },
-  '@media (max-width:1000px)':{
-    processbox:{
-      maxWidth: '300px',
-      margin: '20px',
-    },
+  '@media (max-width:800px)':{
     processcontainer:{
-      flexDirection: 'column'
+      flexDirection: 'column',
     },
   },
 
