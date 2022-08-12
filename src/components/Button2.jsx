@@ -60,6 +60,17 @@ const useStyles = makeStyles({
 
 export default function Button2(props) {
   const classes = useStyles();
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      '#back-to-top-anchor',
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        block: 'center',
+      });
+    }
+  };
   const value = <div className={classes.text}>{props.txt}</div>
-  return <Link to={props.a} className={props.type == 1 ? classes.btn : classes.invert}   style={{textDecoration: 'none'}} >{value}</Link>;
+  return <Link to={props.a} className={props.type == 1 ? classes.btn : classes.invert}   style={{textDecoration: 'none'}} onClick={handleClick} >{value}</Link>;
 }

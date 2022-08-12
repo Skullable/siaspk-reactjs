@@ -30,6 +30,7 @@ const useStyles = makeStyles({
 
   },
   processheading: {
+    textAlign: 'center',
     paddingTop: '100px',
     margin: '3%',
     fontFamily: 'Poppins',
@@ -160,12 +161,12 @@ const useStyles = makeStyles({
   },
   weareleft: {
     backgroundColor: 'none',
-    backgroundImage: "url(/Images/bussinessman.jpg)",
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
     width: '50%',
     display: 'flex',
     flex: 1,
+  },
+  weareimg:{
+    width: '100%',
   },
   weareright: {
     alignItems: 'center',
@@ -182,9 +183,10 @@ const useStyles = makeStyles({
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'column',
-    width: '70%',
-    paddingRight: '100px',
+    maxWidth: '660px',
+    marginRight: '50px',
     marginBottom: '250px',
+    marginLeft: '50px',
   },
   weareheading: {
     fontSize: '54px',
@@ -220,6 +222,12 @@ const useStyles = makeStyles({
     weare:{
       flexDirection: 'column'
     },
+    weareleft:{
+      width: '100%'
+    },
+    weareright:{
+      width: '100%'
+    },
   },
 
 
@@ -235,7 +243,7 @@ software:{
 
 },
 softwarecontainer: {
-  width: '80%',
+  maxWidth: '1200px',
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
@@ -245,10 +253,9 @@ softwarecontainer: {
 infocard: {
   marginTop: '150px',
   marginBottom: '150px',
-  width: '28%',
+  maxWidth: '28%',
   height: '600px',
   display: 'flex',
-  flexWrap: 'wrap',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
@@ -275,6 +282,22 @@ softwareinfo: {
   fontWeight: 300,
   fontFamily: 'poppins',
   color:'#7f7f7f',
+},
+'@media (max-width:1010px)':{
+  softwarecontainer: {
+    flexDirection: 'column',
+  },
+  infocard:{
+    height: '550px',
+    maxWidth: '720px',
+    margin: '50px',
+    paddingTop: '10px',
+  },
+},
+'@media (max-width:769px)':{
+  infocard:{
+    maxWidth: '500px'
+  },
 },
 
 /*-- Products --*/
@@ -308,9 +331,8 @@ inputmsgcontain:{
 },
 userinput:{
   display: 'flex',
-  alignItems: 'center',
   flexDirection: "column",
-  margin: '100px',
+  marginTop: '100px',
 },
 nameinput:{
   backgroundColor:'#ffff',
@@ -321,7 +343,6 @@ nameinput:{
   margin: '10px',
   fontFamily: 'Poppins',
   fontWeight: 300,
-  textTransform: 'uppercase',
 
 
 },
@@ -334,7 +355,6 @@ nameinput2:{
   margin: '10px',
   fontFamily: 'Poppins',
   fontWeight: 300,
-  textTransform: 'uppercase',
 
 
 },
@@ -345,19 +365,41 @@ msginput:{
   borderRadius: '1px',
   height: '200px',
   width: '300px',
-  paddingRight: '100px',
   margin: '10px',
 
 },
 mapcontainer:{
   height: '600px',
-  width: '30%',
+  width: '40%',
   margin: '100px',
   border: 'solid 2px black'
 },
 btn:{
   float: 'left'
-}
+},
+'@media (max-width:1000px)':{
+  contactus:{
+    flexDirection: 'column',
+  },
+  inputmsgcontain:{
+    width: '100%',
+    flexDirection: 'column',
+  },
+  userinput:{
+    maxWidth:'100%'
+  },
+  nameinput:{
+    width: '871px',
+  },
+  nameinput2:{
+    width: '871px',
+  },
+  mapcontainer:{
+    margin:'0px',
+    width: '90%',
+    marginTop: '100px',
+  },
+},
 
 
 });
@@ -507,7 +549,7 @@ function Weare(){
   
   return(
     <div className={classes.weare}>
-      <div className={classes.weareleft}></div>
+      <div className={classes.weareleft}><img className={classes.weareimg} src="Images/bussinessman.jpg" alt="" /></div>
       <div className={classes.weareright}>
         <div className={classes.wearetxt}>
           <span className={classes.weareheading}>Who We Are</span>
@@ -628,7 +670,6 @@ function Contactus (){
             className={classes.nameinput2}
             placeholder="FULL NAME"
             variant="solid"
-            id="fullWidth"
           />
           <TextField
             className={classes.nameinput2}
