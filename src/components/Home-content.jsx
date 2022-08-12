@@ -326,6 +326,7 @@ inputmsgcontain:{
   display: 'flex'
 },
 userinput:{
+  width: '25%',
   display: 'flex',
   flexDirection: "column",
   marginTop: '100px',
@@ -377,21 +378,23 @@ btn:{
   contactus:{
     flexDirection: 'column',
   },
+  userinput:{
+    width:'90%'
+  },
   inputmsgcontain:{
-    width: '100%',
     flexDirection: 'column',
   },
-  userinput:{
-    maxWidth:'100%'
-  },
   nameinput:{
-    width: '871px',
+    width: '90%',
   },
   nameinput2:{
-    width: '871px',
+    width: '90%',
+  },
+  msginput:{
+    width: '90%',
   },
   mapcontainer:{
-    margin:'0px',
+    marginBottom:'100px',
     width: '90%',
     marginTop: '100px',
   },
