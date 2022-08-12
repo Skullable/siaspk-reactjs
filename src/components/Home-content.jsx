@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     alignItems: 'flex-start',
     display: 'flex',
     flexDirection: 'row',
-    width: '80%',
+    maxWidth: '1500px',
     justifyContent: 'center',
 
   },
@@ -39,6 +39,7 @@ const useStyles = makeStyles({
     color: '#1f2732'
   },
   processbox:{
+    maxWidth: '190px',
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
@@ -62,13 +63,37 @@ const useStyles = makeStyles({
     marginTop: '14px'
   },
   processinfo:{
-    width: '100%',
+    maxWidth: '300px',
     color: '#7f7f7f',
     textAlign: 'center',
     fontFamily: 'Poppins',
     fontSize: '16px',
     fontWeight: 300,
     lineHeight: '24px',
+  },
+  '@media (max-width:1069px)':{
+    processline1:{ 
+      display: 'none',
+    },
+    processline2:{ 
+      display: 'none',
+    },
+    processbox:{
+      maxWidth: '300px',
+      margin: '20px',
+    },
+    processcontainer:{
+      justiifyContent: 'space-around'
+    },
+  },
+  '@media (max-width:1000px)':{
+    processbox:{
+      maxWidth: '300px',
+      margin: '20px',
+    },
+    processcontainer:{
+      flexDirection: 'column'
+    },
   },
 
   /*-- Industries --*/
@@ -186,6 +211,17 @@ const useStyles = makeStyles({
     margin: '5px',
     color: '#7f7f7f'
   },
+  '@media (max-width:1175px)':{
+    weareleft:{
+      backgroundSize: '100% 100%',
+    },
+  },
+  '@media (max-width:1050px)':{
+    weare:{
+      flexDirection: 'column'
+    },
+  },
+
 
 /*--software--*/
 software:{
