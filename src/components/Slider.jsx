@@ -1,24 +1,39 @@
 import styled from "styled-components";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {  makeStyles } from "@mui/material";
+import {  makeStyles } from "@mui/styles";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-/*const Carouselwrapper = styled.div`
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
+
+
+const Carouselwrapper = styled.div`
   width: 100%;
   .carousel-control.left,
   .carousel-control.right {
     background: none;
   }
-`;*/
+`;
 
-// const useStyles = makeStyles({
+ const useStyles = makeStyles({
 
-//   caption:{
-//     fontSize: '20px'
-//   }
-// })
+   img:{
+    width: '100vw',
+    trasnsition: 'all smooth',
+    objectFit: 'fill',
+   }
+ })
 const Img = styled.img`
-  height: 70%;
   @keyframes zoom {
     0%{
       transform: scale(1);
@@ -31,7 +46,8 @@ const Img = styled.img`
     }
   }
   animation: zoom 27s infinite;
-  trasnsition: 'all smooth',
+  trasnsition: 'all smooth';
+
 `;
 const Img2 = styled.img`
   width: 1920;
@@ -56,16 +72,38 @@ const Wrapper = styled.div`
 `;
 
 export default function Slider() {
-  // const classes = useStyles();
+  const classes = useStyles();
   return (
-    <Carousel fade>
+    <>
+    <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper"
+    >
+      <SwiperSlide style={{justifyContent: 'center',}} > <Img className={classes.img} src="Images/slider1.jpg" alt="" /></SwiperSlide>
+      <SwiperSlide><Img className={classes.img} src="Images/development.jpg" alt="" /></SwiperSlide>
+      <SwiperSlide> <Img className={classes.img} src="Images/technicalAdvisory.jpg" alt="" /></SwiperSlide>
+    </Swiper>
+  </>
+  )
+}
+/*    <Carousel fade>
       <Carousel.Item interval={3000} touch="true">
         <Img
           className="d-block w-100"
           src="Images/slider1.jpg"
           alt="First slide"
         />
-        <Carousel.Caption>
+        <Carousel.Caption style={{margin: '200px'}} >
           <h3
             style={{
               fontSize: "80px",
