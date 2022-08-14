@@ -41,7 +41,43 @@ const Carouselwrapper = styled.div`
     fontSize: "80px",
     fontFamily: "Poppins",
     fontWeight: "100",
-   }
+    paddingBottom: '20%',
+   },
+   p:{
+    fontFamily: "Poppins",
+    fontSize: "20px",
+    paddingBottom: "30%",
+    fontWeight: "100",
+   },
+   '@media (max-width:1150px)':{
+    h1:{
+      paddingBottom:'5%',
+    },
+    p:{
+      paddingBottom: '5%',
+    },
+  },
+  '@media (max-width:825px)':{
+    h1:{
+      fontSize:'50px',
+    },
+    p:{
+      fontSize:'13px',
+    },
+   },
+   '@media (max-width:599px)':{
+    img:{
+      height: '400px',
+      width: 'auto',
+    },
+    h1:{
+      fontSize:'35px',
+    },
+    p:{
+      fontSize:'10px',
+      paddingBottom: '30px'
+    },
+   },
  })
 
 const Div = styled.div`
@@ -122,14 +158,7 @@ export default function Slider() {
           <h3 className={classes.h1}>
             Smart Automation
           </h3>
-          <p
-            style={{
-              fontFamily: "Poppins",
-              fontSize: "20px",
-//              paddingBottom: "300px",
-              fontWeight: "100",
-            }}
-            >
+          <p className={classes.p} >
             We consult on and implement intelligent software for businesses
             looking to upgrade their digital ecosystems with more powerful and
             scalable solutions designed to fit their particular processes. In
@@ -139,39 +168,18 @@ export default function Slider() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item
-        interval={3000}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Carousel.Item>
           <Img
-            className="d-block w-100"
+            className={classes.img}
             src="Images/development.jpg"
             alt="Second slide"
           />
 
           <Carousel.Caption>
-            <h3
-              style={{
-                fontSize: "80px",
-                fontFamily: "Poppins",
-                fontWeight: "100",
-                paddingBottom: "30%",
-              }}
-            >
+            <h3 className={classes.h1}>
               Custom Software Development Company
             </h3>
-            <p
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "20px",
-                paddingBottom: "30%",
-                fontWeight: "100",
-              }}
-            >
+            <p className={classes.p}>
               We provide turn-key software development services that add value
               to your business. Contact us today and transform your ideas into
               solutions!
@@ -180,29 +188,15 @@ export default function Slider() {
       </Carousel.Item>
       <Carousel.Item interval={3000}>
         <Img
-          className="d-block w-100"
+          className={classes.img}
           src="Images/technicalAdvisory.jpg"
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3
-            style={{
-              fontSize: "80px",
-              fontFamily: "Poppins",
-              fontWeight: "100",
-              paddingBottom: "100px",
-            }}
-          >
+          <h3 className={classes.h1} >
             Technical Advisory
           </h3>
-          <p
-            style={{
-              fontFamily: "Poppins",
-              fontSize: "20px",
-              paddingBottom: "300px",
-              fontWeight: "100",
-            }}
-          >
+          <p className={classes.p} >
             A recognized partner of market-leading technology vendors and
             innovators, Itransition is well-equipped to provide expert-level
             consulting to help you decide on your next move towards
