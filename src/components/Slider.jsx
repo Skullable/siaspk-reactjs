@@ -4,17 +4,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {  makeStyles } from "@mui/styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// Import Swiper styles   
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import "swiper/css/effect-fade";
 
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
 
 
 const Carouselwrapper = styled.div`
@@ -27,12 +25,30 @@ const Carouselwrapper = styled.div`
 
  const useStyles = makeStyles({
 
+   slide:{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent:'center',
+    
+   },
    img:{
     width: '100vw',
     trasnsition: 'all smooth',
     objectFit: 'fill',
+   },
+   h1:{
+    zIndex: '2000',
+    fontSize: "80px",
+    fontFamily: "Poppins",
+    fontWeight: "100",
    }
  })
+
+const Div = styled.div`
+ display: flex;
+ justify-content: center;
+ `
+
 const Img = styled.img`
   @keyframes zoom {
     0%{
@@ -70,14 +86,11 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
-
-export default function Slider() {
-  const classes = useStyles();
-  return (
-    <>
-    <Swiper
+/*    <Swiper
       spaceBetween={30}
       centeredSlides={true}
+      effect={"fade"}
+      loop={true}
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
@@ -86,32 +99,27 @@ export default function Slider() {
         clickable: true,
       }}
       navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
+      modules={[EffectFade, Autoplay, Pagination, Navigation]}
       className="mySwiper"
     >
-      <SwiperSlide style={{justifyContent: 'center',}} > <Img className={classes.img} src="Images/slider1.jpg" alt="" /></SwiperSlide>
+      <SwiperSlide> <div className={classes.slide} > <Img className={classes.img} src="Images/slider1.jpg" alt="" /> <h1 className={classes.h1}> Smart Solutions</h1></div> </SwiperSlide>
       <SwiperSlide><Img className={classes.img} src="Images/development.jpg" alt="" /></SwiperSlide>
       <SwiperSlide> <Img className={classes.img} src="Images/technicalAdvisory.jpg" alt="" /></SwiperSlide>
-    </Swiper>
-  </>
-  )
-}
-/*    <Carousel fade>
-      <Carousel.Item interval={3000} touch="true">
+    </Swiper>*/
+
+export default function Slider() {
+  const classes = useStyles();
+  return (
+    <>
+    <Carousel fade>
+      <Carousel.Item interval={3000} touch="true" className={classes.slide} >
         <Img
-          className="d-block w-100"
+          className={classes.img}
           src="Images/slider1.jpg"
           alt="First slide"
         />
-        <Carousel.Caption style={{margin: '200px'}} >
-          <h3
-            style={{
-              fontSize: "80px",
-              fontFamily: "Poppins",
-              fontWeight: "100",
-//              paddingBottom: "100px",
-            }}
-          >
+        <Carousel.Caption>
+          <h3 className={classes.h1}>
             Smart Automation
           </h3>
           <p
@@ -204,7 +212,8 @@ export default function Slider() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  );
+  </>
+  )
 }
 /*import { makeStyles } from "@mui/styles";
 
