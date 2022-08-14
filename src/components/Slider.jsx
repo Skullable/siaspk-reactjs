@@ -24,9 +24,9 @@ import {  makeStyles } from "@mui/styles";
    },
    p:{
     fontFamily: "Poppins",
-    fontSize: "20px",
+    fontSize: "25px",
     paddingBottom: "30%",
-    fontWeight: "100",
+    fontWeight: "300",
    },
    '@media (max-width:1150px)':{
     h1:{
