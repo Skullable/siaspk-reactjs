@@ -14,7 +14,6 @@ import {  makeStyles } from "@mui/styles";
    img:{
     width: '100vw',
     trasnsition: 'all smooth',
-    objectFit: 'fill',
    },
    h1:{
     zIndex: '2000',
@@ -48,7 +47,7 @@ import {  makeStyles } from "@mui/styles";
    '@media (max-width:599px)':{
     img:{
       height: '400px',
-      width: 'auto',
+      objectFit: 'cover',
     },
     h1:{
       fontSize:'35px',
@@ -103,7 +102,7 @@ export default function Slider() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={3000} touch="true" className={classes.slide} >
           <Img
             className={classes.img}
             src="Images/development.jpg"
