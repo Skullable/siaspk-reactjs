@@ -28,14 +28,22 @@ import {  makeStyles } from "@mui/styles";
     paddingBottom: "30%",
     fontWeight: "300",
    },
-   '@media (max-width:1150px)':{
+   '@media (max-width:1350px)':{
     h1:{
-      paddingBottom:'5%',
+      paddingBottom:'7%',
     },
     p:{
-      paddingBottom: '5%',
+      paddingBottom: '7%',
     },
   },
+  '@media (max-width:970px)':{
+    h1:{
+      fontSize:'70px',
+    },
+    p:{
+      fontSize:'20px',
+    },
+   },
   '@media (max-width:825px)':{
     h1:{
       fontSize:'50px',

@@ -419,7 +419,7 @@ function Ourprocess(){
           <div className={classes.imgcontain}>
             <img
               className={classes.processimg}
-              src="Images/strategy.png"
+              src="Images/strategy2.png"
               alt=""
             />
           </div>

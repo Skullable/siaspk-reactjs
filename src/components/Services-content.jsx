@@ -87,13 +87,16 @@ const useStyles = makeStyles({
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'row',
-        maxWidth: '1140px',
+        maxWidth: '1400px',
         padding: '40px',
         alignItems: 'center',
         justifyContent: 'space-evenly',
     },
     imgcontainer:{
+        height: '200px',
+        width: '220px',
         display: 'flex',
+        justifyContent: 'space-around',
         flexDirection: 'column',
         alignItems: 'center',
         margin: '15px'
@@ -104,9 +107,11 @@ const useStyles = makeStyles({
         objectFit: 'contain'
     },
     h6:{
-        fontSize: '24px',
+        textAlign: 'center',
+        display: 'flex',
+        fontSize: '23px',
         lineHeight: '24px',
-        fontWeight: 600,
+        fontWeight: 700,
         color: '#54595f',
         margin: '10px'
     },
@@ -130,7 +135,10 @@ const useStyles = makeStyles({
         img2:{
             height: '120px',
             width: '110px',
-        }
+        },
+        h6:{
+            fonSize: '22px',
+        },
     },
     '@media (max-width:770px)':{
         service1: {
@@ -252,7 +260,7 @@ export default function Servicescontent() {
                     <Imagecontainer path='Images/Node-js.jpg' text='Node JS' />
                     <Imagecontainer path='Images/laravel.jpg' text='Laravel'/>
                     <Imagecontainer path='Images/Reaacr-Native.jpg' text='React JS'/>
-                    <Imagecontainer path='Images/ios-swift.jpg' text='iOS - Swift/Objective C'/>
+                    <Imagecontainer path='Images/ios-swift.jpg' text='iOS -Swift/Objective C'/>
                     <Imagecontainer path='Images/flutter.jpg' text='Flutter'/>
                     <Imagecontainer path='Images/django.jpg' text='Python/Django'/>
                     <Imagecontainer path='Images/wordpress.png' text='WordPress'/>
